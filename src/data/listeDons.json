@@ -1,0 +1,1839 @@
+[
+  {
+    "id": "ambidexterie",
+    "nom": "Ambidexterie",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "dexterite": 15
+    },
+    "conditionsId": [],
+    "requisPour": ["science_du_combat_a_deux_armes"],
+    "fonctionnement": "En combattant avec deux armes, ce don réduit la pénalité de l’arme de main gauche de 4 points.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "arme_de_predilection",
+    "nom": "Arme de prédilection",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 1
+    },
+    "conditionsId": [],
+    "requisPour": ["specialisation_martiale"],
+    "fonctionnement": "Un personnage possédant ce don est particulièrement adroit avec une arme spécifique et gagne un bonus d’attaque de +1 quand il l’utilise.",
+    "utilisation": "Automatique",
+    "special": "Ce don peut être choisi plusieurs fois, mais ses effets ne sont pas cumulatifs. Il s’applique à une nouvelle arme dans chaque cas."
+  },
+  {
+    "id": "artiste",
+    "nom": "Artiste (SoU)",
+    "type": "Général, Spécial",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +2 à ses jets de Représentation et de Détection.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "attaque_eclair",
+    "nom": "Attaque éclair (SoU)",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "dexterite": 13,
+      "bonus_base_attaque": 4
+    },
+    "conditionsId": ["esquive", "souplesse_du_serpent"],
+    "requisPour": ["attaque_en_rotation"],
+    "fonctionnement": "Les adversaires ne peuvent effectuer d’attaques d’opportunité contre ce personnage quand il se déplace au combat.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "attaque_en_puissance",
+    "nom": "Attaque en puissance",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "force": 13
+    },
+    "conditionsId": [],
+    "requisPour": [
+      "enchaînement",
+      "science_de_l_attaque_en_puissance",
+      "succession_d_enchainements",
+      "puissance_divine",
+      "bouclier_divin"
+    ],
+    "fonctionnement": "Un personnage maîtrisant ce don peut porter des attaques puissantes mais peu élégantes. Quand ce don est sélectionné, il donne un bonus de +5 aux jets de dégâts, au prix d’un -5 sur les jets d’attaque.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "attaque_en_rotation",
+    "nom": "Attaque en rotation (HotU)",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "dexterite": 13,
+      "bonus_base_attaque": 4,
+      "intelligence": 13
+    },
+    "conditionsId": ["expertise_du_combat", "esquive", "souplesse_du_serpent", "attaque_eclair"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage peut frapper tous les adversaires qui l'entourent en tournant sur lui-même. Lors d'une action d'attaque à outrance, il sacrifie ses attaques normales pour porter à la place une attaque de corps à corps avec son bonus d'attaque maximum contre chacun de ses adversaires distants de moins de 1,50 mètre.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "attaques_etourdissantes_sup",
+    "nom": "Attaques étourdissantes supplémentaires (SoU)",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 2
+    },
+    "conditionsId": ["uppercut"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage bénéficie de 3 attaques étourdissantes supplémentaires par jour.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "borne",
+    "nom": "Borné (SoU)",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +1 à ses jets de Volonté et de +2 pour résister à la compétence Raillerie.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "botte_secrete",
+    "nom": "Botte secrète",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 1
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage est particulièrement doué pour manier certaines armes faisant autant appel à la Dextérité qu'à la Force, ce qui lui permet de porter des attaques de corps à corps avec son modificateur de Dextérité au lieu de celui de Force (si le premier est supérieur).",
+    "utilisation": "Automatique",
+    "special": "Ce don ne fonctionne qu’en utilisant l’une des armes suivantes : dague, hachette, kama, kukri, marteau léger, masse d’armes, rapière, épée courte, fouet, serpe et frappe à mains nues. Dans le cas d'un personnage de taille P (Gnome ou halfelin), le don botte secrète ne s'applique pas pour la rapière car le personnage utilise cette arme à deux mains."
+  },
+  {
+    "id": "bouclier_divin",
+    "nom": "Bouclier divin (SoU)",
+    "type": "Général, Spécial",
+    "conditionsCaractéristiques": {
+      "charisme": 13,
+      "force": 13
+    },
+    "conditionsId": ["renvoi_des_morts_vivants", "attaque_en_puissance"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage peut, en sacrifiant une de ses tentatives de renvoi, ajouter son modificateur de Charisme à sa classe d’armure pendant un nombre de rounds égal à son modificateur de Charisme.",
+    "utilisation": "Si sélectionné",
+    "special": "Ce bonus d’armure est de type esquive."
+  },
+  {
+    "id": "brute",
+    "nom": "Brute (SoU)",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +2 à ses jets d’Initiative et à ses jets de Persuasion.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "chanson_obsedante",
+    "nom": "Chanson obsédante (SoU)",
+    "type": "Général, Spécial",
+    "conditionsId": ["chant_du_barde"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Les effets du chant du Barde durent 5 rounds supplémentaires.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "chant_de_malheur",
+    "nom": "Chant de malheur (HotU)",
+    "type": "Général, Spécial",
+    "conditionsId": ["chant_du_barde"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Les bardes peuvent maudire leurs ennemis en chantant. Les créatures sourdes ne sont pas affectées. Le chant affecte tous les ennemis dans un rayon de 10 m et dure 10 rounds. Toutes les pénalités sont cumulatives :\n- Représentation 3 (Barde niv 1) : -1 aux jets d’attaque et de dégâts.\n- Représentation 6 (Barde niv 2) : -1 aux jets de Volonté.\n- Représentation 9 (Barde niv 3) : -1 aux jets de dégâts et de Vigueur.\n- Représentation 12 (Barde niv 6) : -1 aux jets de Réflexe et aux jets de compétences.\n- Représentation 15 (Barde niv 8) : -1 aux jets d’attaque et -8 PV.\n- Représentation 18 (Barde niv 11) : malus d’esquive -2 à la CA, -1 aux jets de compétences.\n- Représentation 21 (Barde niv 14) : -1 aux jets de dégâts, -8 PV, malus d’esquive -1 à la CA.\n- Représentation 24 (Barde niv 15) : -1 à tous les jets de sauvegarde, malus d’esquive -1 à la CA.\n- Représentation 30 (Barde niv 16) : -1 aux jets de Volonté, -4 PV, malus d’esquive -1 à la CA.\nÀ chaque tranche de +5 rangs en Représentation et +1 niveau de barde, -2 PV et -1 aux jets de compétences supplémentaires.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "chants_du_barde_sup",
+    "nom": "Chants du barde supplémentaires (SoU)",
+    "type": "Général, Spécial",
+    "conditionsId": ["chant_du_barde"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage peut utiliser le Chant du barde quatre fois de plus par jour.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "combat_a_deux_armes",
+    "nom": "Combat à deux armes",
+    "type": "Général, Guerrier",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": ["science_du_combat_a_deux_armes"],
+    "fonctionnement": "Un personnage maîtrisant ce don réduit les pénalités subies en combattant avec deux armes. La pénalité normale est de -6 à la main habile, et -10 à l’autre main ; elles passent respectivement à -4 et -8. Le don Ambidexterie réduit encore la pénalité d’attaque pour la deuxième arme de 4 (passant à -4/-4). Les meilleurs résultats sont obtenus si l’arme de la main gauche est légère (réduit encore les pénalités à -2/-2). Les rôdeurs reçoivent ce don gratuitement au niveau 1.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "combat_en_aveugle",
+    "nom": "Combat en aveugle (SoU)",
+    "type": "Général, Guerrier",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "fonctionnement": "Ce don permet à un personnage de mieux combattre s’il est aveuglé ou s’il affronte des créatures invisibles. Il peut relancer son jet de pourcentage pour savoir s’il touche quelque chose. De plus, les créatures invisibles n’ont aucun bonus à leurs attaques contre ce personnage.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "coup_ajuste",
+    "nom": "Coup ajusté",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 1
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Ce don permet de porter une attaque potentiellement handicapante aux bras ou aux jambes de l’adversaire. Les coups ajustés sont effectués avec une pénalité de -4 et doivent être supérieurs au test de Discipline de l’adversaire. Un coup ajusté aux jambes réduit la vitesse de déplacement de l’adversaire de 20 %. Un coup ajusté aux bras applique une pénalité cumulative de -2 aux jets d’attaque de la créature.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "coup_de_pied_circulaire",
+    "nom": "Coup de pied circulaire (SoU)",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 3,
+      "dexterite": 15
+    },
+    "conditionsId": ["science_du_combat_a_mains_nues"],
+    "requisPour": [],
+    "fonctionnement": "Si le personnage réussit à toucher un adversaire avec une attaque à mains nues, il peut effectuer une attaque supplémentaire contre un autre ennemi proche. On ne peut effectuer plus d’une attaque supplémentaire par round.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "coup_vicieux",
+    "nom": "Coup vicieux (SoU)",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 2
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage connaît des techniques de combat brutales et efficaces. En sacrifiant toutes ses attaques du round, il peut effectuer un coup vicieux qui inflige 1d4 points de dégâts supplémentaires. On ne peut utiliser ce don avec Attaque en puissance.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "creation_de_baguettes_magiques",
+    "nom": "Création de baguettes magiques (HotU)",
+    "type": "Création d’objet",
+    "conditionsCaractéristiques": {
+      "niveau_lanceur_de_sort": 5
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le lanceur de sorts peut créer une baguette de n'importe quel sort de niveau 4 ou moins s'il le connaît. La fabrication coûte une petite quantité de PX et d’or, selon le niveau du sort. Les sorts donnés par des dons ou pouvoirs spéciaux ne peuvent pas être lancés sur une baguette. Il faut lancer le sort sur une baguette d'os qui peut être créée avec la compétence Fabrication d'arme ou achetée dans certains magasins. La baguette nouvellement créée aura un nombre de charges égal à 1d20+1 par niveau de lanceur de sorts du personnage, avec un maximum de 50 charges.",
+    "utilisation": "Si sélectionné",
+    "special": "Le niveau de lanceur de sorts utilisé est celui de la classe qui lance le sort."
+  },
+  {
+    "id": "desarmement",
+    "nom": "Désarmement",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "intelligence": 13
+    },
+    "conditionsId": [],
+    "requisPour": ["science_du_desarmement"],
+    "fonctionnement": "Le personnage peut tenter de désarmer un adversaire au combat au corps à corps. Une tentative de désarmement induit une pénalité de -6 au jet d’attaque du personnage, et le combattant possédant l’arme la plus grande gagne un bonus de +4 par catégorie de différence de taille. Une attaque réussie inflige les dégâts normaux, et si l’adversaire rate un jet de Discipline, son arme lui échappe des mains.",
+    "utilisation": "Si sélectionné",
+    "special": "Une tentative de désarmement provoque une attaque d’opportunité."
+  },
+  {
+    "id": "discret",
+    "nom": "Discret (SoU)",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +2 à ses jets de Déplacement silencieux et de Discrétion.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "ecole_renforcee",
+    "nom": "École renforcée",
+    "type": "Général, Magicien",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": ["ecole_superieure", "protection_des_arcanes"],
+    "fonctionnement": "Un personnage maîtrisant ce don est adepte d’une certaine école de magie, et gagne un bonus de +2 au DD de tous les sorts de cette école qu’il lance.",
+    "utilisation": "Automatique",
+    "special": "Ce don peut être choisi plusieurs fois, mais ses effets ne sont pas cumulatifs. Il faut sélectionner une école de magie différente à chaque fois. Les Gnomes reçoivent École renforcée (Illusion) gratuitement au niveau 1."
+  },
+  {
+    "id": "ecole_superieure",
+    "nom": "École supérieure (SoU)",
+    "type": "Général, Magicien",
+    "conditionsId": ["ecole_renforcee"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage devient expert dans les sorts d’une école de magie et bénéficie d’un bonus de +4 au DD pour tous les sorts de cette école.",
+    "utilisation": "Automatique",
+    "special": "Ce don peut être choisi plusieurs fois, mais ses effets ne sont pas cumulatifs. Il faut sélectionner une école de magie différente à chaque fois. Les effets de ce don remplacent ceux de École renforcée."
+  },
+  {
+    "id": "ecriture_de_parchemin",
+    "nom": "Écriture de parchemin (HotU)",
+    "type": "Création d’objet",
+    "conditionsCaractéristiques": {
+      "niveau_lanceur_de_sort": 1
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le lanceur de sorts peut créer un parchemin de n'importe quel sort s'il le connaît. La fabrication coûte une petite quantité de PX et d’or, selon le niveau du sort. Les sorts donnés par des dons ou pouvoirs spéciaux ne peuvent pas être lancés sur un parchemin. Il faut lancer le sort sur un parchemin vierge acheté dans certains magasins.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "efficacite_des_sorts_accrue",
+    "nom": "Efficacité des sorts accrue",
+    "type": "Général, Magicien",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": ["efficacite_des_sorts_superieure"],
+    "fonctionnement": "Un lanceur de sorts maîtrisant ce don gagne un bonus de +2 à ses jets de niveau de lanceur pour vaincre la résistance aux sorts d’une créature.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "efficacite_des_sorts_superieure",
+    "nom": "Efficacité des sorts supérieure (SoU)",
+    "type": "Général, Magicien",
+    "conditionsId": ["efficacite_des_sorts_accrue"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage bénéficie d’un bonus de +4 pour vaincre la résistance à la magie de son adversaire.",
+    "utilisation": "Automatique",
+    "special": "Les effets de ce don remplacent ceux de Efficacité des sorts accrue."
+  },
+  {
+    "id": "emprise_sur_les_morts_vivants",
+    "nom": "Emprise sur les morts-vivants",
+    "type": "Spécial",
+    "conditionsId": ["paladin", "pretre"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Ce pouvoir divin permet au personnage de renvoyer des morts-vivants six fois de plus par jour.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "enchaînement",
+    "nom": "Enchaînement",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "force": 13
+    },
+    "conditionsId": ["attaque_en_puissance"],
+    "requisPour": ["succession_d_enchainements"],
+    "fonctionnement": "Si le personnage tue un ennemi, il gagne une attaque gratuite contre un adversaire à portée de combat au corps à corps.",
+    "utilisation": "Automatique",
+    "special": "Les moines reçoivent ce don au niveau 1."
+  },
+  {
+    "id": "esquive",
+    "nom": "Esquive",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "dexterite": 13
+    },
+    "conditionsId": [],
+    "requisPour": ["attaque_eclair", "souplesse_du_serpent"],
+    "fonctionnement": "Le personnage gagne un bonus d’esquive de +1 à la CA contre les attaques de sa cible actuelle ou de son dernier assaillant.",
+    "utilisation": "Automatique",
+    "special": "Une condition qui annulerait un bonus de Dextérité à la CA annule également les bonus d’esquive. Les bonus d’esquive (provenant de dons distincts ou de bonus raciaux) sont cumulatifs."
+  },
+  {
+    "id": "expertise_du_combat",
+    "nom": "Expertise du combat (SoU)",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "intelligence": 13
+    },
+    "conditionsId": [],
+    "requisPour": ["expertise_supreme"],
+    "fonctionnement": "Un personnage possédant ce don peut utiliser des techniques défensives, ce qui lui octroie un bonus de +5 à la CA et un malus de -5 à ses jets d’attaque.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "expertise_supreme",
+    "nom": "Expertise suprême (SoU)",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "intelligence": 13
+    },
+    "conditionsId": ["expertise_du_combat"],
+    "requisPour": [],
+    "fonctionnement": "Un personnage possédant ce don peut utiliser des techniques défensives, ce qui lui octroie un bonus de +10 à la CA et un malus de -10 à ses jets d’attaque.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "extension_d_effet",
+    "nom": "Extension d’effet",
+    "type": "Métamagie",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Tous les effets quantifiés et variables d’un sort étendu sont augmentés de 50 %. Un sort étendu inflige 50 % de dégâts en plus, soigne 50 % de points de vie en plus, etc. L’extension n’augmente pas la durée du sort.",
+    "utilisation": "Un sort étendu occupe un emplacement de sort de deux niveaux plus haut que la normale.",
+    "special": "Les sauvegardes et jets opposés (ex : Dissipation de la magie) ne sont pas affectés."
+  },
+  {
+    "id": "extension_de_duree",
+    "nom": "Extension de durée",
+    "type": "Métamagie, Magicien",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Les sorts à durée étendue voient leur durée doublée, fonctionnant deux fois plus longtemps.",
+    "utilisation": "Un sort étendu occupe un emplacement de sort d’un niveau plus haut que la normale.",
+    "special": "Les sorts à effet instantané ou permanent ne sont pas affectés."
+  },
+  {
+    "id": "incantation_rapide",
+    "nom": "Incantation rapide",
+    "type": "Métamagie, Magicien",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Les sorts à incantation rapide peuvent être lancés instantanément, les rendant invulnérables aux contresorts ou à l’interruption. L’incantation rapide est une action libre, et on peut faire une autre action dans le même round, y compris une autre incantation. On ne peut faire qu’une incantation rapide par round.",
+    "utilisation": "Un sort à incantation rapide occupe un emplacement de sort de quatre niveaux plus haut que la normale."
+  },
+  {
+    "id": "incantation_silencieuse",
+    "nom": "Incantation silencieuse",
+    "type": "Métamagie, Magicien",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Les sorts silencieux sont lancés sans composante verbale.",
+    "utilisation": "Un sort silencieux occupe un emplacement de sort d’un niveau plus haut que la normale."
+  },
+  {
+    "id": "incantation_statique",
+    "nom": "Incantation statique",
+    "type": "Métamagie, Magicien",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Les incantations statiques se font sans composante somatique. Toute pénalité due au port d’une armure pendant l’incantation n’applique pas à un sort préparé avec ce don.",
+    "utilisation": "Un sort à incantation statique occupe un emplacement de sort d’un niveau plus haut que la normale."
+  },
+  {
+    "id": "indomptable",
+    "nom": "Indomptable (SoU)",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +1 à ses jets de Vigueur et de Volonté ainsi qu’à ses jets de sauvegarde contre la magie de la Mort.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "magie_de_guerre",
+    "nom": "Magie de guerre",
+    "type": "Général, Magicien",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a appris à lancer des sorts en combat et ne subit pas la pénalité ordinaire de -4 aux jets de Concentration quand il est à moins de 3 mètres d’un ennemi.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "magocratie_courtoise",
+    "nom": "Magocratie courtoise (SoU)",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +2 à ses jets de Savoir et de Connaissance des sorts.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "maniement_des_armes_exotiques",
+    "nom": "Maniement des armes exotiques",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 1
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Ce don permet d'utiliser efficacement toutes les armes exotiques : épée bâtarde, masse d’armes double, hache double, kama, katana, kukri, faux, shuriken, double lame. Un personnage ne peut pas utiliser une arme qu’il ne maîtrise pas.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "maniement_des_armes_martiales",
+    "nom": "Maniement des armes martiales",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Ce don permet d’utiliser efficacement toutes les armes de guerre : hache d’armes, grande hache, épée à deux mains, hallebarde, hachette, fléau d’armes lourd, fléau d’armes léger, marteau léger, arc long, épée longue, rapière, cimeterre, épée courte, arc court, hache de jet, marteau de guerre. Un personnage ne peut pas utiliser une arme dont il ne maîtrise pas le maniement.",
+    "utilisation": "Automatique",
+    "special": "Barbares, guerriers, paladins et rôdeurs maîtrisent automatiquement les armes de guerre. Le sort Transformation de Tenser donne à un magicien la maîtrise temporaire du maniement des armes martiales."
+  },
+  {
+    "id": "maniement_des_armes_simples",
+    "nom": "Maniement des armes simples",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Ce don permet d’utiliser efficacement toutes les armes courantes : gourdin, dague, masse d’armes légère, serpe, pique, morgenstern, bâton, arbalètes lourde et légère, fléchettes, fronde. Un personnage ne peut pas utiliser une arme dont il ne maîtrise pas le maniement.",
+    "utilisation": "Automatique",
+    "special": "Tous les personnages à l’exception des druides, moines, roublards et magiciens manient automatiquement toutes les armes courantes. Le sort Transformation de Tenser donne à un magicien la maîtrise temporaire du maniement des armes courantes."
+  },
+  {
+    "id": "maniement_du_bouclier",
+    "nom": "Maniement du bouclier",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Un personnage maîtrisant ce don a suivi un entraînement pour manier un bouclier.",
+    "utilisation": "Automatique",
+    "special": "Toutes les classes à l’exception des moines, des roublards, des ensorceleurs et des magiciens ont ce don gratuitement."
+  },
+  {
+    "id": "parade_de_projectiles",
+    "nom": "Parade de projectiles",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "dexterite": 13
+    },
+    "conditionsId": ["science_du_combat_a_mains_nues"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage peut essayer de parer une attaque de projectile par round. Cela est traité comme un jet de Réflexes contre un DD de 20.",
+    "utilisation": "Automatique",
+    "special": "Si le personnage est pris au dépourvu, il perd le bénéfice de ce don. Les moines reçoivent ce don gratuitement au niveau 2."
+  },
+  {
+    "id": "paume_d_argent",
+    "nom": "Paume d’argent (SoU)",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +2 à ses jets d’Évaluation et de Persuasion.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "port_d_armure_intermediaire",
+    "nom": "Port d'armure intermédiaire",
+    "type": "Général",
+    "conditionsId": ["port_d_armure_legere"],
+    "conditionsCaractéristiques": {},
+    "requisPour": ["port_d_armure_lourde"],
+    "fonctionnement": "Ce don permet d’utiliser efficacement les armures intermédiaires.",
+    "utilisation": "Automatique",
+    "special": "Toutes les classes sauf les moines, roublards, ensorceleurs et magiciens ont ce don gratuitement."
+  },
+  {
+    "id": "port_d_armure_legere",
+    "nom": "Port d'armure légère",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": ["port_d_armure_intermediaire", "port_d_armure_lourde"],
+    "fonctionnement": "Ce don permet d’utiliser efficacement les armures légères.",
+    "utilisation": "Automatique",
+    "special": "Toutes les classes sauf les moines, ensorceleurs et magiciens ont ce don gratuitement."
+  },
+  {
+    "id": "port_d_armure_lourde",
+    "nom": "Port d'armure lourde",
+    "type": "Général",
+    "conditionsId": ["port_d_armure_legere", "port_d_armure_intermediaire"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Ce don permet d’utiliser efficacement les armures lourdes.",
+    "utilisation": "Automatique",
+    "special": "Les guerriers, paladins et prêtres reçoivent ce don gratuitement."
+  },
+  {
+    "id": "preparation_de_potion",
+    "nom": "Préparation de potion (HotU)",
+    "type": "Création d’objet",
+    "conditionsCaractéristiques": {
+      "niveau_lanceur_de_sort": 3
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le lanceur de sorts peut créer une potion de n'importe quel sort de niveau 3 ou moins s'il le connaît. La fabrication coûte une petite quantité de PX et d’or, selon le niveau du sort. Les sorts donnés par dons ou pouvoirs spéciaux ne peuvent pas être lancés sur une fiole magique vide. Il faut lancer le sort sur une fiole magique vide achetée dans certains magasins.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "protection_des_arcanes",
+    "nom": "Protection des arcanes (SoU)",
+    "type": "Général, Magicien",
+    "conditionsId": ["ecole_renforcee"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +2 à ses jets de sauvegarde contre les sorts de l’école de magie sélectionnée.",
+    "utilisation": "Automatique",
+    "special": "Ce don peut être choisi plusieurs fois, mais ses effets ne sont pas cumulatifs. Il faut sélectionner une école de magie différente à chaque fois."
+  },
+  {
+    "id": "puissance_divine",
+    "nom": "Puissance divine (SoU)",
+    "type": "Général, Spécial",
+    "conditionsCaractéristiques": {
+      "charisme": 13,
+      "force": 13
+    },
+    "conditionsId": ["renvoi_des_morts_vivants", "attaque_en_puissance"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage peut, en sacrifiant une de ses tentatives de Renvoi des morts-vivants, ajouter son modificateur de Charisme à tous les jets de dégâts d’armes pendant un nombre de rounds égal à son modificateur de Charisme.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "quintessence_des_sorts",
+    "nom": "Quintessence des sorts",
+    "type": "Métamagie, Magicien",
+    "conditionsCaractéristiques": {},
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Les sorts en quintessence appliquent tous les effets numériques variables — comme les dégâts, le nombre de cibles, etc. — à leur valeur maximale.",
+    "utilisation": "Un sort en quintessence occupe un emplacement de sort de trois niveaux plus haut que la normale.",
+    "special": "Les jets de sauvegarde et opposition (ex : Dissipation de la magie) ne sont pas affectés."
+  },
+  {
+    "id": "rechargement_rapide",
+    "nom": "Rechargement rapide (SoU)",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 2
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage peut recharger si rapidement qu’il a le même nombre d’attaques par round avec tous les types d’arbalètes qu’avec un arc normal.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "reflexes_surhumains",
+    "nom": "Réflexes surhumains",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Les réflexes du personnage sont plus rapides que la normale, ce qui lui donne un bonus de +2 à tous ses jets de Réflexes.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "renversement",
+    "nom": "Renversement",
+    "type": "Général, Guerrier",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": ["science_du_renversement"],
+    "fonctionnement": "Un personnage maîtrisant ce don peut tenter une attaque de renversement au corps à corps. Il effectue un jet d’Attaque avec une pénalité de -4 ; en cas de succès, la cible fait un jet opposé de Discipline contre le jet d’Attaque. Si l’attaquant gagne, la cible est renversée (« à terre »).",
+    "utilisation": "Si sélectionné",
+    "special": "Les personnages à terre ne peuvent pas attaquer. Les personnages reçoivent un bonus de +4 pour attaquer des adversaires à terre au corps à corps, mais une pénalité de -4 pour les attaquer à distance. On ne peut tenter un renversement que contre des créatures d’au plus une catégorie de taille supérieure. La cible reçoit un bonus de +4 à son jet opposé pour chaque catégorie de taille au-dessus de l’attaquant, ou une pénalité de -4 pour chaque catégorie de taille en dessous. Les moines reçoivent ce don gratuitement au niveau 6."
+  },
+  {
+    "id": "resistance_a_la_maladie",
+    "nom": "Résistance à la maladie (SoU)",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +4 à ses jets de Vigueur pour résister aux effets de la maladie.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "resistance_au_poison",
+    "nom": "Résistance au poison (SoU)",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +4 à ses jets de Vigueur pour résister aux effets du poison.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "resistance_aux_energies",
+    "nom": "Résistance aux énergies (SoU)",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_vigueur": 8
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +5 contre le type d’énergie choisi (on ignore les 5 premiers points de dégâts infligés par ce type d’énergie).",
+    "utilisation": "Automatique",
+    "special": "Ce don peut être sélectionné plusieurs fois, mais ses effets ne sont pas cumulatifs. Il s’applique à chaque fois à un nouveau type d’énergie."
+  },
+  {
+    "id": "robustesse",
+    "nom": "Robustesse",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Un personnage maîtrisant ce don est plus résistant que la moyenne et gagne 1 point de vie supplémentaire par niveau. Ces points de vie sont gagnés rétroactivement en choisissant ce don.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "sang_du_serpent",
+    "nom": "Sang du serpent (SoU)",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 1
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +2 à ses jets de Vigueur contre le poison et de +1 à ses jets de Réflexes.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "sanguin",
+    "nom": "Sanguin (SoU)",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 1
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +2 à l’Initiative et à ses jets de Détection.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "science_de_l_attaque_en_puissance",
+    "nom": "Science de l’attaque en puissance",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "force": 13
+    },
+    "conditionsId": ["attaque_en_puissance"],
+    "requisPour": [],
+    "fonctionnement": "Ce don permet à un personnage d’échanger une pénalité de -10 à son jet d’Attaque contre un bonus de +10 à son jet de Dégâts. Très utile contre des adversaires résistants mais faciles à toucher.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "science_de_l_initiative",
+    "nom": "Science de l’initiative (SoU)",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage a un bonus de +4 à l’Initiative.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "science_de_la_parade",
+    "nom": "Science de la parade",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "intelligence": 13
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de compétence de +4 à son jet opposé quand il utilise la compétence Parade.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "science_du_combat_a_deux_armes",
+    "nom": "Science du combat à deux armes",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 9
+    },
+    "conditionsId": ["combat_a_de_deux_armes", "ambidexterie"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage maîtrisant ce don peut donner une deuxième attaque avec sa main gauche (avec une pénalité de -5 sur son jet d’Attaque).",
+    "utilisation": "Automatique",
+    "special": "Les rôdeurs reçoivent ce don au niveau 9, même s’ils ne remplissent pas toutes les conditions requises."
+  },
+  {
+    "id": "science_du_combat_a_mains_nues",
+    "nom": "Science du combat à mains nues",
+    "type": "Général, Guerrier",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": ["coup_de_pied_circulaire", "uppercut", "parade_de_projectiles"],
+    "fonctionnement": "Les adversaires armés ne reçoivent plus d’attaque d’opportunité quand le personnage les attaque à mains nues.",
+    "utilisation": "Automatique",
+    "special": "Les moines reçoivent ce don gratuitement au niveau 1."
+  },
+  {
+    "id": "science_du_critique",
+    "nom": "Science du critique",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 8
+    },
+    "conditionsId": ["maitrise_arme_choisie"],
+    "requisPour": [],
+    "fonctionnement": "Cette capacité de combat double la plage de menace critique d’une arme sélectionnée (ex : épée longue menaçant sur 19–20 devient 17–20).",
+    "utilisation": "Automatique",
+    "special": "La plage de menace d’une arme acérée (Keen) est déjà doublée ; avec ce don, elle est triplée. Ce don peut être choisi plusieurs fois mais s’applique à une arme différente à chaque fois."
+  },
+  {
+    "id": "science_du_desarmement",
+    "nom": "Science du désarmement",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "intelligence": 13
+    },
+    "conditionsId": ["desarmement"],
+    "requisPour": [],
+    "fonctionnement": "Un personnage avec ce don sait éviter les attaques d’opportunité quand il tente de désarmer un adversaire. En cas de réussite, il désarme son adversaire. La pénalité pour tenter un désarmement est réduite à -4.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "science_du_renversement",
+    "nom": "Science du renversement",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "intelligence": 13,
+      "bonus_base_attaque": 7
+    },
+    "conditionsId": ["renversement"],
+    "requisPour": [],
+    "fonctionnement": "Un personnage doté de ce don est considéré comme une catégorie de taille supérieure quand il fait une attaque de renversement. Il peut tenter de faire tomber des adversaires au corps à corps : jet d’Attaque à -4 contre Discipline. Si succès, cible « à terre ».",
+    "utilisation": "Si sélectionné",
+    "special": "Les personnages à terre ne peuvent pas attaquer. Les attaquants bénéficient de +4 pour attaquer un adversaire à terre au corps à corps, mais subissent -4 pour les attaquer à distance. Un personnage ne peut tenter un renversement que contre des créatures d’au plus une catégorie de taille supérieure. La cible reçoit +4 à son jet opposé par catégorie supérieure, ou -4 par catégorie inférieure. Les moines reçoivent ce don gratuitement au niveau 6."
+  },
+  {
+    "id": "souplesse_du_serpent",
+    "nom": "Souplesse du serpent",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "dexterite": 13
+    },
+    "conditionsId": ["esquive"],
+    "requisPour": ["attaque_eclair"],
+    "fonctionnement": "Un personnage maîtrisant ce don a appris à éviter les attaques d’opportunité plus efficacement, gagnant un bonus d’esquive de +4 à sa CA.",
+    "utilisation": "Automatique",
+    "special": "Une condition annulant un bonus de Dextérité à la CA annule aussi les bonus d’esquive. Les bonus d’esquive (issus de dons distincts ou de bonus raciaux) sont cumulatifs."
+  },
+  {
+    "id": "specialisation_martiale",
+    "nom": "Spécialisation martiale",
+    "type": "Spécial, Guerrier",
+    "conditionsId": ["arme_de_predilection"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Un personnage possédant ce don a suivi un entraînement rigoureux avec un groupe d’armes spécifique et gagne un bonus de +2 aux dégâts quand il utilise ces armes au combat.",
+    "utilisation": "Automatique",
+    "special": "Ce don peut être sélectionné plusieurs fois, mais ses effets ne sont pas cumulatifs. Il s’applique à chaque fois à une nouvelle arme."
+  },
+  {
+    "id": "succession_d_enchainements",
+    "nom": "Succession d’enchaînements (SoU)",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "force": 13,
+      "bonus_base_attaque": 4
+    },
+    "conditionsId": ["attaque_en_puissance", "enchaînement"],
+    "requisPour": [],
+    "fonctionnement": "Si le personnage tue un ennemi, il gagne une attaque gratuite contre un adversaire à portée de combat. Avec ce don, il n’y a pas de limite au nombre d’enchaînements pendant le round.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "talent",
+    "nom": "Talent",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Un personnage maîtrisant ce don est particulièrement adroit dans une compétence donnée et gagne un bonus de +3 à tous ses jets la concernant.",
+    "utilisation": "Automatique",
+    "special": "Ce don peut être choisi plusieurs fois, mais ses effets ne sont pas cumulatifs. Ils s’appliquent à chaque fois à une nouvelle compétence."
+  },
+  {
+    "id": "tir_a_bout_portant",
+    "nom": "Tir à bout portant",
+    "type": "Général, Guerrier",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": ["tir_rapide"],
+    "fonctionnement": "Un personnage maîtrisant ce don annule la pénalité de -4 pour tirer au corps à corps avec une arme de tir et gagne +1 supplémentaire à ses jets d’Attaque et de Dégâts quand la cible est à moins de 5 m.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "tir_instinctif",
+    "nom": "Tir instinctif (SoU)",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 3,
+      "sagesse": 13
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "La Sagesse guide les attaques à distance du personnage, qui bénéficie de son modificateur de Sagesse au lieu de son modificateur de Dextérité (si plus élevé) lorsqu’il utilise des armes à distance.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "tir_rapide",
+    "nom": "Tir rapide",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "dexterite": 13
+    },
+    "conditionsId": ["tir_a_bout_portant"],
+    "requisPour": [],
+    "fonctionnement": "Un personnage possédant ce don gagne une attaque supplémentaire par round avec une arme de tir (hors arbalètes). L’attaque supplémentaire se fait avec le bonus d’Attaque le plus élevé, mais toutes les attaques subissent -2 ce round.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "uppercut",
+    "nom": "Uppercut",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "dexterite": 13,
+      "sagesse": 13,
+      "bonus_base_attaque": 8
+    },
+    "conditionsId": ["science_du_combat_a_mains_nues"],
+    "requisPour": ["attaques_etourdissantes_sup"],
+    "fonctionnement": "Un personnage possédant ce don peut tenter un coup étourdissant avec une pénalité de -4 à l’attaque et aux dégâts. S’il réussit, la cible doit effectuer un jet de Vigueur (DD = 10 + ½ niveau de l’attaquant + modificateur de Sagesse) ou être étourdie pendant 3 rounds. Cette attaque peut être utilisée une fois par jour tous les quatre niveaux du personnage.",
+    "utilisation": "Si sélectionné",
+    "special": "Les moines reçoivent ce don gratuitement au niveau 1, sans satisfaire aux conditions. De plus, les moines ne subissent aucune pénalité à l’attaque ou aux dégâts et peuvent l’utiliser une fois par jour par niveau. Les créatures artificielles et morts-vivants sont immunisés contre cette attaque, de même que toute créature immunisée aux coups critiques."
+  },
+  {
+    "id": "vigilance",
+    "nom": "Vigilance",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Bonus de +2 aux jets de Détection et de Perception auditive grâce à des sens en alerte.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "vigueur_surhumaine",
+    "nom": "Vigueur surhumaine",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage est plus résistant que la normale, gagnant un bonus de +2 à tous ses jets de Vigueur.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "volonte_de_fer",
+    "nom": "Volonté de fer",
+    "type": "Général",
+    "conditionsId": [],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "La forte présence d’esprit du personnage lui confère un bonus de +2 à tous ses jets de Volonté.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "arme_de_predilection_epique",
+    "nom": "Arme de prédilection épique",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["arme_de_predilection"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +2 à tous ses jets d’Attaque avec l’arme choisie.",
+    "utilisation": "Automatique"
+  },
+
+  {
+    "id": "charisme_surhumain",
+    "nom": "Charisme surhumain",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +1 à son Charisme. Ce don peut être sélectionné plusieurs fois jusqu’à un bonus maximum de +10.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "chatiment_supreme",
+    "nom": "Châtiment suprême",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "charisme": 25
+    },
+    "conditionsId": ["chatiment_du_mal", "chatiment_du_bien"],
+    "requisPour": [],
+    "fonctionnement": "Quand le personnage réussit une attaque de châtiment, il ajoute deux fois son niveau aux dégâts. Ce don peut être sélectionné plusieurs fois et, à chaque fois, il ajoutera son niveau aux dégâts jusqu’à un maximum de 10 fois son niveau.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "constitution_surhumaine",
+    "nom": "Constitution surhumaine",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +1 à sa Constitution. Ce don peut être sélectionné plusieurs fois jusqu’à un bonus maximum de +10.",
+    "utilisation": "Automatique",
+    "special": "Ce don ne fait partie d’aucune liste de dons supplémentaires de classe, il est impossible d’atteindre niveau 8 pour le choisir."
+  },
+  {
+    "id": "critique_aneantissant",
+    "nom": "Critique anéantissant",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "force": 23
+    },
+    "conditionsId": [
+      "enchaînement",
+      "succession_d_enchainements",
+      "science_du_critique",
+      "attaque_en_puissance",
+      "arme_de_predilection"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Avec une attaque critique réussie et l’arme de son choix, le personnage inflige +1d6 points de dégâts. Si le multiplicateur de critique de l’arme est ×3, les dégâts sont augmentés de +2d6 ; si ×4, de +3d6.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "critique_devastateur",
+    "nom": "Critique dévastateur",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "force": 25
+    },
+    "conditionsId": [
+      "enchaînement",
+      "succession_d_enchainements",
+      "science_du_critique",
+      "critique_aneantissant",
+      "attaque_en_puissance",
+      "arme_de_predilection"
+    ],
+    "requisPour": [],
+    "fonctionnement": "En cas d’attaque critique avec l’arme sélectionnée, la cible doit effectuer un jet de Vigueur ou mourir. Les créatures immunisées contre les critiques ne sont pas affectées.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "dexterite_surhumaine",
+    "nom": "Dextérité surhumaine",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +1 à sa Dextérité. Ce don peut être sélectionné plusieurs fois jusqu’à un bonus maximum de +10.",
+    "utilisation": "Automatique"
+  },
+    {
+    "id": "ecole_renforcee_epique",
+    "nom": "École renforcée épique",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["ecole_renforcee", "ecole_superieure"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage bénéficie d’un bonus de +6 au DD pour tous les jets de sauvegarde contre des sorts de l’école choisie.",
+    "utilisation": "Automatique",
+    "special": "Apparaît seulement pour Enchantement et Illusion (nommé Talent épique pour les autres écoles)."
+  },
+  {
+    "id": "efficacite_des_sorts_accrue_epique",
+    "nom": "Efficacité des sorts accrue épique",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["efficacite_des_sorts_accrue", "efficacite_des_sorts_superieure"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +6 aux jets de niveau de lanceur de sorts pour vaincre la résistance à la magie d’une créature.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "force_surhumaine",
+    "nom": "Force surhumaine",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne +1 en Force. Ce don peut être sélectionné plusieurs fois pour un bonus maximum de +10.",
+    "utilisation": "Automatique",
+    "special": "Ce don ne faisant partie d’aucune liste de dons supplémentaires de classe, il est impossible d’atteindre niveau 8."
+  },
+  {
+    "id": "forme_de_creature_artificielle",
+    "nom": "Forme de créature artificielle",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "sagesse": 27
+    },
+    "conditionsId": ["metamorphe_epique"],
+    "requisPour": [],
+    "fonctionnement": "Trois fois par jour, le personnage peut prendre l’une des formes artificielles suivantes : golem de fer, golem de pierre ou golem démoniaque.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "forme_de_creature_outreplan",
+    "nom": "Forme de créature d’Outreplan",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "sagesse": 25
+    },
+    "conditionsId": ["metamorphe_epique"],
+    "requisPour": [],
+    "fonctionnement": "Trois fois par jour, le personnage peut prendre la forme de différentes créatures d’Outreplan : chef Azer, Rakshasa ou Slaad funeste.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "forme_de_dragon",
+    "nom": "Forme de dragon",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "sagesse": 30
+    },
+    "conditionsId": ["forme_animale_6x_jour"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage peut utiliser Forme animale pour se transformer en dragon. La transformation dure 1 heure par niveau de classe.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "forme_de_mort_vivant",
+    "nom": "Forme de mort-vivant",
+    "type": "Spécial",
+    "conditionsId": ["metamorphe_epique"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Trois fois par jour, le personnage peut se transformer en différentes créatures mortes-vivantes puissantes : Seigneur d’Outre-tombe, Vampire, Spectre.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "incantation_rapide_auto_i",
+    "nom": "Incantation rapide automatique I",
+    "type": "Métamagie",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["incantation_rapide", "connaissance_des_sorts_30", "sort_niveau_9"],
+    "requisPour": [],
+    "fonctionnement": "Permet de lancer un sort d’une simple pensée. S’applique aux sorts de niveau 0–3.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "incantation_rapide_auto_ii",
+    "nom": "Incantation rapide automatique II",
+    "type": "Métamagie",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["incantation_rapide", "connaissance_des_sorts_30", "sort_niveau_9"],
+    "requisPour": [],
+    "fonctionnement": "Permet de lancer un sort d’une simple pensée. S’applique aux sorts de niveau 4–6.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "incantation_rapide_auto_iii",
+    "nom": "Incantation rapide automatique III",
+    "type": "Métamagie",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["incantation_rapide", "connaissance_des_sorts_30", "sort_niveau_9"],
+    "requisPour": [],
+    "fonctionnement": "Permet de lancer un sort d’une simple pensée. S’applique aux sorts de niveau 7–9.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "rechargement_rapide_epique",
+    "nom": "Rechargement rapide",
+    "type": "Général, Guerrier",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 2
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage peut recharger si rapidement qu’il a le même nombre d’attaques par round avec tous les types d’arbalètes qu’avec un arc normal.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "reflexes_epiсes",
+    "nom": "Réflexes épiсes",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +4 à ses jets de Réflexes.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "renvoi_planaire",
+    "nom": "Renvoi planaire",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "sagesse": 25,
+      "charisme": 25
+    },
+    "conditionsId": ["renvoi_des_morts_vivants"],
+    "requisPour": [],
+    "fonctionnement": "Ce don permet de renvoyer des créatures d’Outreplan comme s’il s’agissait de morts-vivants. Si le personnage a deux fois plus de niveaux que la créature a de DV, celle-ci est détruite instantanément.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "resistance_aux_energies_destructrices",
+    "nom": "Résistance aux énergies destructrices (Acide, Électricité, Feu, Froid ou Son)",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne une résistance 10 aux dégâts d’énergie destructrice sélectionnée. Peut être sélectionné plusieurs fois jusqu’à résistance 100.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "robustesse_epique",
+    "nom": "Robustesse épique",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne 20 points de vie. Ce don peut être sélectionné plusieurs fois pour un bonus maximum de +200 points de vie.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "sagesse_surhumaine",
+    "nom": "Sagesse surhumaine",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +1 à sa Sagesse. Ce don peut être sélectionné plusieurs fois jusqu’à un bonus maximum de +10.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "sante_de_fer",
+    "nom": "Santé de fer",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "constitution": 25
+    },
+    "conditionsId": ["vigueur_surhumaine"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage est immunisé contre toutes les maladies et tous les poisons.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "science_de_l_attaque_en_rotation_epique",
+    "nom": "Science de l’attaque en rotation épique",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "intelligence": 13,
+      "dexterite": 23
+    },
+    "conditionsId": ["esquive", "expertise_du_combat", "souplesse_du_serpent", "attaque_eclair", "attaque_en_rotation"],
+    "requisPour": [],
+    "fonctionnement": "Avec une attaque à outrance, le personnage effectue une attaque de corps à corps avec son bonus d’attaque normal contre tous les adversaires qui le menacent.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "science_de_l_attaque_sournoise",
+    "nom": "Science de l’attaque sournoise",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {},
+    "conditionsId": ["attaque_sournoise_roublard", "attaque_mortelle_assassin"],
+    "requisPour": [],
+    "fonctionnement": "L’attaque sournoise est augmentée de +1d6 points de dégâts. Peut être sélectionné plusieurs fois pour un bonus max de +10d6.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "science_de_la_magie_de_guerre",
+    "nom": "Science de la magie de guerre",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["magie_de_guerre"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage ne subit pas d’attaque d’opportunité s’il lance des sorts alors qu’il est menacé.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "science_de_la_resistance_a_la_magie",
+    "nom": "Science de la résistance à la magie",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["ame_de_diamant"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage bénéficie d’un bonus de +2 à sa Résistance à la magie. Peut être sélectionné plusieurs fois (jusqu’à +20).",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "science_de_l_uppercut",
+    "nom": "Science de l’uppercut",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "dexterite": 19,
+      "sagesse": 19
+    },
+    "conditionsId": ["science_du_combat_a_mains_nues", "uppercut"],
+    "requisPour": [],
+    "fonctionnement": "Ajoute +2 au DD des attaques étourdissantes du personnage. Peut être sélectionné plusieurs fois pour un bonus max de +20 au DD.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "science_du_ki_plus4",
+    "nom": "Science du Ki +4 (+5)",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "sagesse": 21
+    },
+    "conditionsId": ["moine", "ki_plus_3"],
+    "requisPour": [],
+    "fonctionnement": "Les attaques à mains nues du moine sont considérées comme des armes magiques +4 (+5) contre des créatures ayant la Réduction des dégâts.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "seigneur_des_ombres_epique",
+    "nom": "Seigneur des ombres épique",
+    "type": "Spécial",
+    "conditionsId": ["maitre_des_ombres_epique"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le pouvoir de convocation des ombres d’un personnage est renforcé, lui permettant d’invoquer un Seigneur des ombres épique plus puissant. Contrairement aux seigneurs des ombres normaux, ceux de niveau épique bénéficient de la force vitale de leur maître, les rendant plus forts à chaque niveau gagné par le maître des ombres.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "serviteur_fielon_epique",
+    "nom": "Serviteur fiélon épique",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {},
+    "conditionsId": ["chevalier_noir_niveau_15"],
+    "requisPour": [],
+    "fonctionnement": "Le mal et la haine qui rongent le personnage attirent l’attention d’un Vrock épique quand il invoque un serviteur fiélon d’Outreplan. Cette créature est redoutable au corps à corps et, grâce à l’âme maléfique de son maître, devient de plus en plus puissante au fur et à mesure que le chevalier noir gagne des niveaux.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "sort_epique_armure_de_mage_epique",
+    "nom": "Sort épique : Armure de mage épique",
+    "type": "Sort épique",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["sort_niveau_9", "art_de_la_magie_26"],
+    "requisPour": [],
+    "fonctionnement": "Le lanceur de sorts bénéficie des bonus suivants à sa CA : armure naturelle +5, esquive +5, parade +5 et altération +5. Le bonus d’esquive est cumulable avec d’autres bonus d’esquive, mais les autres bonus ne sont pas cumulables avec des bonus du même type.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "sort_epique_chevalier_dragon",
+    "nom": "Sort épique : Chevalier dragon",
+    "type": "Sort épique",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["sort_niveau_9", "connaissance_des_sorts_22"],
+    "requisPour": [],
+    "fonctionnement": "Le lanceur de sorts invoque un puissant dragon rouge adulte à l’endroit désigné, pour qu’il combatte à ses côtés.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "sort_epique_garde_epique",
+    "nom": "Sort épique : Garde épique",
+    "type": "Sort épique",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["sort_niveau_9", "art_de_la_magie_34"],
+    "requisPour": [],
+    "fonctionnement": "Ce sort invoque une puissante protection magique autour du lanceur, qui le protège contre tous les dégâts tranchants, contondants ou perforants. Il octroie une Réduction des dégâts de 50/+20 pendant 1 round par niveau.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "sort_epique_orbe_infernal",
+    "nom": "Sort épique : Orbe infernal",
+    "type": "Sort épique",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["sort_niveau_9", "connaissance_des_sorts_32"],
+    "requisPour": [],
+    "fonctionnement": "Le lanceur de sorts crée une boule d’énergie infligeant 10d6 points de dégâts soniques, d’acide, de feu et d’électricité dans la zone d’effet.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "sort_epique_poussiere_de_momie",
+    "nom": "Sort épique : Poussière de momie",
+    "type": "Sort épique",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["sort_niveau_9", "art_de_la_magie_15"],
+    "requisPour": [],
+    "fonctionnement": "Le lanceur de sorts invoque une puissante momie guerrière qui lui est soumise.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "sort_epique_ruine_supreme",
+    "nom": "Sort épique : Ruine suprême",
+    "type": "Sort épique",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["sort_niveau_9", "connaissance_des_sorts_25"],
+    "requisPour": [],
+    "fonctionnement": "Le lanceur de sorts inflige 35d6 points de dégâts à une victime.",
+    "utilisation": "Doit être lancé",
+    "special": "Jet de sauvegarde : Vigueur pour demi-dégâts."
+  },
+  {
+    "id": "specialisation_martiale_epique",
+    "nom": "Spécialisation martiale épique",
+    "type": "Spécial",
+    "conditionsId": ["arme_de_predilection", "arme_de_predilection_epique", "specialisation_martiale"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +4 aux dégâts avec l’arme choisie.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "talent_epique",
+    "nom": "Talent épique",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["rang_20_competence"],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +10 à ses jets pour la compétence choisie.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "tueuse_d_ennemis",
+    "nom": "Tueuse d’ennemis",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": ["rodeur_21"],
+    "requisPour": [],
+    "fonctionnement": "Contre ses ennemis jurés, quelle que soit l’arme utilisée, elle est considérée comme une arme tueuse (+2 aux jets d’Attaque et +2d6 aux dégâts).",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "vigueur_epique",
+    "nom": "Vigueur épique",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne un bonus de +4 à ses jets de Vigueur.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "vitesse_aveuglante",
+    "nom": "Vitesse aveuglante",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "dexterite": 25
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage peut lancer le sort Rapidité sur lui-même une fois par jour. L’effet dure 10 rounds.",
+    "utilisation": "Si sélectionné"
+  },
+  {
+    "id": "volonte_epique",
+    "nom": "Volonté épique",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage bénéficie d’un bonus de +4 à ses jets de Volonté.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "empathie_sauvage",
+    "nom": "Empathie Sauvage",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "empathie_animale": 7
+    },
+    "conditionsId": [
+      "druide_6",
+      "rodeur_6"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Les animaux, créatures magiques et fées invoqués par le personnage reçoivent des bonus dépendant de son score d’Empathie animalière et de prestige (non cumulatif avec le don « Prestige »). Le personnage peut également effrayer les animaux dans un rayon de 50 m pendant 5 minutes ; le total de DV d’animaux ainsi repoussés ne peut excéder deux fois son score d’Empathie animalière.",
+    "utilisation": "Automatique pour le bonus aux invocations. Activable (sur soi) pour le repoussement d’animaux."
+  },
+  {
+    "id": "creation_d_objets_merveilleux",
+    "nom": "Création d’Objets Merveilleux",
+    "type": "Magique (Création d’objet)",
+    "conditionsCaractéristiques": {},
+    "conditionsId": [
+      "lanceur_de_sort_4"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Permet d’infuser de la magie dans un objet d’artisanat afin d’en faire un objet magique (jusqu’à 4 enchantements, 5 si le dernier est un sort de finition). Nécessite un schéma de création d’objet magique qui est détruit à l’usage. Permet aussi de créer des baguettes en lançant un sort de niveau ≤ 4 sur une baguette vierge : la baguette reçoit (1d20 + 1) × (niveau de lanceur de sorts) charges, jusqu’à 50.",
+    "utilisation": "Lancer la commande !Shadam pour sélectionner l’enchantement et activer le don sur l’objet d’artisanat. Pour créer une baguette, lancer un sort de niveau ≤ 4 sur une baguette vierge. Les compétences « Connaissance des sorts », le Niveau de Lanceur de sorts et le Prestige permettent de réduire le coût des schémas."
+  },
+  {
+    "id": "prestige",
+    "nom": "Prestige",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "intelligence": 13,
+      "charisme": 13
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage possède une notoriété, lui permettant d’enrôler des compagnons d’armes et de gagner +1 point de prestige. Les compagnons et invocations capables d’apprécier la prestance de leur « maître » reçoivent des bonus liés au score de Persuasion et à sa valeur de prestige (non cumulatif avec « Empathie Sauvage »).",
+    "utilisation": "Automatique.",
+    "notes": "Pré‐requis de la classe Tacticien. Le maître des systèmes dans la zone AFK permet d’acheter des compagnons."
+  },
+  {
+    "id": "negociation_de_contrats",
+    "nom": "Négociation de Contrats",
+    "type": "Magique",
+    "conditionsCaractéristiques": {
+      "persuasion": 5,
+      "charisme": 13
+    },
+    "conditionsId": [
+      "lanceur_de_sort_5"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Permet de passer des contrats avec des créatures planaires afin de les invoquer ultérieurement via les sorts adaptés (Contrat V, Contrat intermédiaire VI, Contrat suprême VIII, Portail IX pour Magiciens/Ensorceleurs ; Contrat V, Contrat intermédiaire VI pour Bardes ; Appel d’allié d’Outreplan VI, Portail IX pour Prêtres). Plusieurs méthodes : grimoires d’invocateur, contrats « directs » (côut 1 XP héros tous les 10 DV de la créature), contrats « animés » (animation et négociation via PNJ), contrats « primordiaux » (liés à une entité ou divinité, non cumulatif, coûte 3 points d’énergie spirituelle).",
+    "utilisation": "Activation ciblée sur une créature pour passer le contrat (côut 1 XP héros + 1 XP tous les 10 DV de la cible). Le menu repos permet d’associer un sort à chaque invocation.",
+    "notes": "Permet d’accéder à un bestiaire d’invocations spécialisées (élémentaires, serviteurs d’entité). Les contrats primordiaux s’achètent auprès du Maître des systèmes."
+  },
+  {
+    "id": "maitrise_des_armures_legeres",
+    "nom": "Maîtrise des Armures Légères",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 3,
+      "dexterite": 12,
+      "constitution": 13,
+      "discipline": 6
+    },
+    "conditionsId": [
+      "port_d_armure_legere"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Le personnage est à l’aise en armure légère : il reçoit +1 point d’Esquive à la CA, +3 points de Discipline, et une immunité aux dégâts physiques égale à son modificateur de Constitution + 1 % tous les 4 niveaux de classe (max 10 %).",
+    "utilisation": "Automatique dès qu’une armure légère est équipée."
+  },
+  {
+    "id": "science_de_la_maitrise_des_armures_legeres",
+    "nom": "Science de la Maîtrise des Armures Légères",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 8,
+      "discipline": 12
+    },
+    "conditionsId": [
+      "maitrise_des_armures_legeres"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Comme Maîtrise des Armures Légères, mais +6 points de Discipline et immunité aux dégâts physiques égale au modificateur de Constitution + 1 % tous les 3 niveaux (max 15 %). Réduit l’échec des sorts de 5 %.",
+    "utilisation": "Automatique dès qu’une armure légère est équipée."
+  },
+  {
+    "id": "maitrise_epique_des_armures_legeres",
+    "nom": "Maîtrise Épique des Armures Légères",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "discipline": 24
+    },
+    "conditionsId": [
+      "science_de_la_maitrise_des_armures_legeres"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Comme Science de la Maîtrise des Armures Légères, mais +10 points de Discipline et immunité aux dégâts physiques égale au modificateur de Constitution + 1 % tous les 2 niveaux (max 20 %). Réduit l’échec des sorts de 5 % et considère les armures légères comme des vêtements pour les dons comme Chorégraphie Défensive ou Défense Astucieuse.",
+    "utilisation": "Automatique dès qu’une armure légère est équipée."
+  },
+  {
+    "id": "maitrise_des_armures_intermediaires",
+    "nom": "Maîtrise des Armures Intermédiaires",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 3,
+      "force": 10,
+      "dexterite": 10,
+      "constitution": 13,
+      "discipline": 6
+    },
+    "conditionsId": [
+      "port_d_armure_intermediaire"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Le personnage est à l’aise en armure intermédiaire : +1 point d’Esquive à la CA, +3 points de Discipline, et immunité aux dégâts physiques égale au modificateur de Constitution + 1 % tous les 4 niveaux (max 10 %). De plus, la perte de santé est moins rapide.",
+    "utilisation": "Automatique dès qu’une armure intermédiaire est équipée."
+  },
+  {
+    "id": "science_de_la_maitrise_des_armures_intermediaires",
+    "nom": "Science de la Maîtrise des Armures Intermédiaires",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 8,
+      "discipline": 12
+    },
+    "conditionsId": [
+      "maitrise_des_armures_intermediaires"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Comme Maîtrise des Armures Intermédiaires, mais +6 points de Discipline, immunité aux dégâts physiques égale au modificateur de Constitution + 1 % tous les 3 niveaux (max 15 %), perte de santé plus lente, et échec de sorts réduit de 5 %.",
+    "utilisation": "Automatique dès qu’une armure intermédiaire est équipée."
+  },
+  {
+    "id": "maitrise_epique_des_armures_intermediaires",
+    "nom": "Maîtrise Épique des Armures Intermédiaires",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "discipline": 24
+    },
+    "conditionsId": [
+      "science_de_la_maitrise_des_armures_intermediaires"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Comme Science de la Maîtrise des Armures Intermédiaires, mais +10 points de Discipline, immunité aux dégâts physiques égale au modificateur de Constitution + 1 % tous les 2 niveaux (max 20 %), perte de santé plus lente, et échec de sorts réduit de 5 %.",
+    "utilisation": "Automatique dès qu’une armure intermédiaire est équipée."
+  },
+  {
+    "id": "maitrise_des_armures_lourdes",
+    "nom": "Maîtrise des Armures Lourdes",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 3,
+      "force": 12,
+      "constitution": 13,
+      "discipline": 6
+    },
+    "conditionsId": [
+      "port_d_armure_lourde"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Le personnage est à l’aise en armure lourde : +3 points de Discipline et immunité aux dégâts physiques égale au modificateur de Constitution + 1 % tous les 4 niveaux (max 10 %). De plus, la perte de santé est moins rapide.",
+    "utilisation": "Automatique dès qu’une armure lourde est équipée."
+  },
+  {
+    "id": "science_de_la_maitrise_des_armures_lourdes",
+    "nom": "Science de la Maîtrise des Armures Lourdes",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 8,
+      "discipline": 12
+    },
+    "conditionsId": [
+      "maitrise_des_armures_lourdes"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Comme Maîtrise des Armures Lourdes, mais +6 points de Discipline, immunité aux dégâts physiques égale au modificateur de Constitution + 1 % tous les 3 niveaux (max 15 %), perte de santé plus lente, et échec de sorts réduit de 10 %.",
+    "utilisation": "Automatique dès qu’une armure lourde est équipée."
+  },
+  {
+    "id": "maitrise_epique_des_armures_lourdes",
+    "nom": "Maîtrise Épique des Armures Lourdes",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "discipline": 24
+    },
+    "conditionsId": [
+      "science_de_la_maitrise_des_armures_lourdes"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Comme Science de la Maîtrise des Armures Lourdes, mais +10 points de Discipline, immunité aux dégâts physiques égale au modificateur de Constitution + 1 % tous les 2 niveaux (max 20 %), perte de santé plus lente, échec de sorts réduit de 10 %. Si l’armure est une armure golem, le personnage ne subit plus de pénalité de vitesse.",
+    "utilisation": "Automatique dès qu’une armure lourde est équipée."
+  },
+  {
+    "id": "rempart",
+    "nom": "Rempart",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 4,
+      "force": 13,
+      "discipline": 6
+    },
+    "conditionsId": [
+      "maniement_du_bouclier"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Permet d’adopter une posture martiale défensive lorsqu’il utilise un bouclier ou une arme à deux mains. Réutilisable après 10 rounds. Si utilisé avec un bouclier, l’arme en main droite inflige des dégâts contondants. Les bonus varient selon l’équipement :\n• Pavois : Camouflage à distance 50 %, Parade +5, réduction des dégâts = modificateur de Force, vitesse réduite de 50 %, durée 2 rounds.\n• Écu : Camouflage 35 %, Parade +7, réduction des dégâts = ¾ × modificateur de Force, vitesse réduite de 20 %, durée 3 rounds.\n• Rondache : Camouflage 20 %, Parade +10, réduction des dégâts = ½ × modificateur de Force, vitesse réduite de 10 %, durée 4 rounds.\n• Arme à deux mains : Parade +7, réduction des dégâts = modificateur de Force, vitesse réduite de 30 %, durée 3 rounds.\nLa réduction totale par utilisation = 2 × modificateur de Constitution (cumulable avec autres réductions). Certaines armes (lance, trident, bâton, hallebarde) et certaines classes (Protecteur nain, Chevalier) augmentent la durée d’un round (max 5 rounds).",
+    "utilisation": "Action libre, sur utilisation, avec bouclier équipé."
+  },
+  {
+    "id": "science_du_rempart",
+    "nom": "Science du Rempart",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "bonus_base_attaque": 9,
+      "discipline": 12
+    },
+    "conditionsId": [
+      "rempart"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Comme Rempart, mais réutilisable après 5 rounds au lieu de 10. Bonus identiques selon équipement :\n• Pavois : Camouflage 50 %, Parade +5, réduction des dégâts = modificateur de Force, vitesse réduite 50 %, durée 2 rounds.\n• Écu : Camouflage 35 %, Parade +7, réduction des dégâts = ¾ × modificateur de Force, vitesse réduite 20 %, durée 3 rounds.\n• Rondache : Camouflage 20 %, Parade +10, réduction des dégâts = ½ × modificateur de Force, vitesse réduite 10 %, durée 4 rounds.\n• Arme à deux mains : Parade +7, réduction des dégâts = modificateur de Force, vitesse réduite 30 %, durée 3 rounds.\nRéduction totale = 2 × modificateur de Constitution. Certains équipements et classes peuvent augmenter la durée (max 5 rounds).",
+    "utilisation": "Action libre, sur utilisation, avec bouclier équipé."
+  },
+  {
+    "id": "cri_de_provocation",
+    "nom": "Cri de Provocation",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "raillerie": 5
+    },
+    "conditionsId": [
+      "barbare_3",
+      "chevalier_3",
+      "protecteur_nain_3",
+      "chevalier_noir_1"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Un puissant cri provoque les ennemis dans la direction de la cible, leur inflige 1d3 points de dégâts soniques et peut les inciter à attaquer. Les cibles doivent réussir un jet de concentration opposé à un jet de raillerie du personnage ; en cas d’échec, elles perdent 5 points de concentration et –1 point de CA pendant 1d4 + 1 rounds. Repos de 30 secondes pour relancer.",
+    "utilisation": "Action libre, ciblé sur un ennemi."
+  },
+  {
+    "id": "grande_robustesse",
+    "nom": "Grande Robustesse",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "vigueur": 5
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage gagne +20 points de vie et augmente considérablement le nombre de soins possibles avant de devoir se reposer. Peut être sélectionné plusieurs fois pour un bonus cumulé maximal de +200 points de vie (les soins augmentent également).",
+    "utilisation": "Automatique."
+  },
+  {
+    "id": "camouflage_personnel",
+    "nom": "Camouflage Personnel",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "dexterite": 20,
+      "discretion": 20,
+      "acrobatie": 20
+    },
+    "conditionsId": [
+      "esquive_surnaturelle"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Le personnage bénéficie d’un bonus de +10 % en Camouflage personnel. Peut être sélectionné plusieurs fois pour un bonus cumulé maximal de +30 %.",
+    "utilisation": "Automatique."
+  },
+  {
+    "id": "esquive_epique",
+    "nom": "Esquive Épique",
+    "type": "Spécial",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21,
+      "dexterite": 23,
+      "acrobatie": 30
+    },
+    "conditionsId": [
+      "esquive",
+      "esquive_surnaturelle",
+      "roule_boule"
+    ],
+    "requisPour": [],
+    "fonctionnement": "À chaque round, le personnage évite automatiquement la première attaque qui le cible.",
+    "utilisation": "Automatique."
+  },
+  {
+    "id": "pied_marin",
+    "nom": "Pied-Marin",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "force": 10,
+      "dexterite": 10,
+      "constitution": 10,
+      "acrobatie": 5,
+      "savoir": 5
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage maîtrise les opérations à bord d’un navire : +5 aux tests de Navigation. Réparation de navire deux fois plus efficace (si capable). Plus habile pour manier des armes de siège en mer. En étudiant longuement, peut découvrir de nouvelles destinations. Si possesseur d’un navire, peut lancer des expéditions vers ces destinations (utilisation de points temps à bord).",
+    "utilisation": "Automatique."
+  },
+  {
+    "id": "reputation_epique",
+    "nom": "Réputation Épique",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 21
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage devient célèbre : +4 aux jets de Bluff, Intimidation, Persuasion et Moquerie. +2 points de prestige, et reçoit 50 points d’héroïsme (suffisant pour obtenir une capacité héroïque).",
+    "utilisation": "Automatique."
+  },
+  {
+    "id": "chance_des_heros",
+    "nom": "Chance des Héros",
+    "type": "Général",
+    "conditionsCaractéristiques": {
+      "niveau_personnage": 1
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage a +1 à tous ses jets de sauvegarde, et peut recevoir jusqu’à +5 bonus sur certains jets liés à la chance (jets d’influence astrologique). Octroie également +25 points d’héroïsme (héros en devenir).",
+    "utilisation": "Automatique."
+  },
+  {
+    "id": "sang_magique",
+    "nom": "Sang Magique",
+    "type": "Classe (Ensorceleur)",
+    "conditionsCaractéristiques": {},
+    "conditionsId": [
+      "ensorceleur_10"
+    ],
+    "requisPour": [],
+    "fonctionnement": "L’ensorceleur éveille son sang magique pour lancer des sorts plus puissants : +1 à la puissance des sorts tous les 3 niveaux d’ensorceleur, pendant 1 round tous les 6 niveaux de classe.",
+    "utilisation": "Action libre ; peut être relancé toutes les 10 minutes."
+  },
+  {
+    "id": "invisibilite_supreme",
+    "nom": "Invisibilité Suprême",
+    "type": "Illusion",
+    "conditionsCaractéristiques": {},
+    "conditionsId": [
+      "barde_4",
+      "magicien_4",
+      "ensorceleur_4"
+    ],
+    "requisPour": [],
+    "fonctionnement": "Le bénéficiaire devient invisible et ne peut être détecté normalement. Après une attaque ou un sort, il devient partiellement visible mais bénéficie d’un bonus de couverture de 20 %. Ce camouflage augmente de 5 % pour chaque don d’école Illusion possédé.",
+    "utilisation": "Action standard sur une créature (contact).",
+    "notes": "Contre-sort supplémentaire : Négation de l’invisibilité. Jet de sauvegarde : inoffensif."
+  }
+]
