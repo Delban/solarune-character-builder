@@ -15,6 +15,14 @@ export function DonCard({ don, onClick }: DonCardProps) {
     window.dispatchEvent(customEvent);
   };
 
+  // Limite le texte à 80 mots
+  const getShortText = (text: string) => {
+    if (!text) return '';
+    const words = text.split(/\s+/);
+    if (words.length <= 80) return text;
+    return words.slice(0, 80).join(' ') + '…';
+  };
+
   return (
     <div
       className={`rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border p-6 cursor-pointer
@@ -44,7 +52,7 @@ export function DonCard({ don, onClick }: DonCardProps) {
         ))}
       </div>
       <p className={document.body.classList.contains('dark') ? "text-gray-300" : "text-gray-600"}>
-        {don.description || don.fonctionnement}
+        {getShortText(don.description || don.fonctionnement)}
       </p>
       {/* ...other fields as needed... */}
     </div>

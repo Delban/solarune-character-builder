@@ -14,17 +14,24 @@ export function DonDetails({ don, onBack, allDons }: DonDetailsProps) {
     return found ? found.nom : id;
   };
 
+  // Détecte le mode sombre via la classe sur le body
+  const isDark = typeof document !== "undefined" && document.body.classList.contains('dark');
+
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
+    <div className={`${isDark ? "bg-gray-800 text-gray-100" : "bg-white text-gray-900"} rounded-lg shadow-lg p-6`}>
       <button 
         onClick={onBack}
-        className="flex items-center mb-6 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-lg transition-colors"
+        className={`flex items-center mb-6 px-4 py-2 font-medium rounded-lg transition-colors
+          ${isDark
+            ? "bg-gray-700 hover:bg-gray-600 text-white"
+            : "bg-blue-500 hover:bg-blue-600 text-white"
+          }`}
       >
         ← Retour à la liste
       </button>
       
       <h2 className="text-2xl font-bold mb-2">{don.nom}</h2>
-      <p className="text-gray-600 mb-4">{don.type}</p>
+      <p className={isDark ? "text-blue-200 mb-4" : "text-gray-600 mb-4"}>{don.type}</p>
 
       {don.condition && (
         <p className="mb-2">
@@ -36,7 +43,7 @@ export function DonDetails({ don, onBack, allDons }: DonDetailsProps) {
       {don.conditionsId && don.conditionsId.length > 0 && (
         <div className="mb-2">
           <span className="font-semibold">Dons requis : </span>
-          {don.conditionsId.join(', ')}
+          {don.conditionsId.map(id => getDonNom(id)).join(', ')}
         </div>
       )}
 
@@ -56,10 +63,10 @@ export function DonDetails({ don, onBack, allDons }: DonDetailsProps) {
           </ul>
         </div>
       )}
-{(!don.conditionsId?.length && 
-  (!don.conditionsCaractéristiques || Object.keys(don.conditionsCaractéristiques).length === 0)) && (
-  <p className="mb-2 text-gray-500">Aucune condition requise.</p>
-)}
+      {(!don.conditionsId?.length && 
+        (!don.conditionsCaractéristiques || Object.keys(don.conditionsCaractéristiques).length === 0)) && (
+        <p className="mb-2 text-gray-500">Aucune condition requise.</p>
+      )}
       {/* Affichage du champ "Requis pour" avec les noms */}
       {don.requisPour && don.requisPour.length > 0 && (
         <div className="mb-2">
@@ -79,13 +86,11 @@ export function DonDetails({ don, onBack, allDons }: DonDetailsProps) {
       </p>
 
       {don.special && (
-        <div className="bg-yellow-100 border-l-4 border-yellow-500 p-3">
+        <div className={`${isDark ? "bg-yellow-900 border-yellow-700" : "bg-yellow-100 border-yellow-500"} border-l-4 p-3`}>
           <p className="font-semibold">Spécial :</p>
           <p className="whitespace-pre-wrap">{don.special}</p>
         </div>
       )}
-
-      
     </div>
   );
 }

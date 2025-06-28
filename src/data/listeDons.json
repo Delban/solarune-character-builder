@@ -148,6 +148,16 @@
     "fonctionnement": "Les effets du chant du Barde durent 5 rounds supplémentaires.",
     "utilisation": "Automatique"
   },
+   {
+    "id": "chant_du_barde",
+    "nom": "Chant du barde",
+    "type": "Barde",
+    "conditionsId": ["barde_1"],
+    "conditionsCaractéristiques": {},
+    "requisPour": [],
+    "fonctionnement": "Les effets du chant du Barde durent 5 rounds supplémentaires.",
+    "utilisation": "Automatique"
+  },
   {
     "id": "chant_de_malheur",
     "nom": "Chant de malheur (HotU)",
@@ -227,7 +237,7 @@
   {
     "id": "creation_de_baguettes_magiques",
     "nom": "Création de baguettes magiques (HotU)",
-    "type": "Création d’objet",
+    "type": "Création d'objet",
     "conditionsCaractéristiques": {
       "niveau_lanceur_de_sort": 5
     },
@@ -285,7 +295,7 @@
   {
     "id": "ecriture_de_parchemin",
     "nom": "Écriture de parchemin (HotU)",
-    "type": "Création d’objet",
+    "type": "Création d'objet",
     "conditionsCaractéristiques": {
       "niveau_lanceur_de_sort": 1
     },
@@ -561,7 +571,7 @@
   {
     "id": "preparation_de_potion",
     "nom": "Préparation de potion (HotU)",
-    "type": "Création d’objet",
+    "type": "Création d'objet",
     "conditionsCaractéristiques": {
       "niveau_lanceur_de_sort": 3
     },
@@ -1408,7 +1418,7 @@
   {
     "id": "specialisation_martiale_epique",
     "nom": "Spécialisation martiale épique",
-    "type": "Spécial",
+    "type": "Spécial, Guerrier",
     "conditionsId": ["arme_de_predilection", "arme_de_predilection_epique", "specialisation_martiale"],
     "conditionsCaractéristiques": {},
     "requisPour": [],
@@ -1454,7 +1464,7 @@
   {
     "id": "vitesse_aveuglante",
     "nom": "Vitesse aveuglante",
-    "type": "Général",
+    "type": "Général, Don Modifié",
     "conditionsCaractéristiques": {
       "niveau_personnage": 21,
       "dexterite": 25
@@ -1494,7 +1504,7 @@
   {
     "id": "creation_d_objets_merveilleux",
     "nom": "Création d’Objets Merveilleux",
-    "type": "Magique (Création d’objet)",
+    "type": "Création d'objet",
     "conditionsCaractéristiques": {},
     "conditionsId": [
       "lanceur_de_sort_4"
@@ -1812,7 +1822,7 @@
   {
     "id": "sang_magique",
     "nom": "Sang Magique",
-    "type": "Classe (Ensorceleur)",
+    "type": "Ensorceleur",
     "conditionsCaractéristiques": {},
     "conditionsId": [
       "ensorceleur_10"
@@ -1822,18 +1832,63 @@
     "utilisation": "Action libre ; peut être relancé toutes les 10 minutes."
   },
   {
-    "id": "invisibilite_supreme",
-    "nom": "Invisibilité Suprême",
-    "type": "Illusion",
-    "conditionsCaractéristiques": {},
-    "conditionsId": [
-      "barde_4",
-      "magicien_4",
-      "ensorceleur_4"
-    ],
+    "id": "artisan_forgeron",
+    "nom": "Artisan Forgeron",
+    "type": "Création d'objet",
+    "conditionsCaractéristiques": {
+      "force": 13,
+      "dexterite": 10,
+      "creation_arme": 10,
+      "creation_armure": 10
+    },
+    "conditionsId": [],
     "requisPour": [],
-    "fonctionnement": "Le bénéficiaire devient invisible et ne peut être détecté normalement. Après une attaque ou un sort, il devient partiellement visible mais bénéficie d’un bonus de couverture de 20 %. Ce camouflage augmente de 5 % pour chaque don d’école Illusion possédé.",
-    "utilisation": "Action standard sur une créature (contact).",
-    "notes": "Contre-sort supplémentaire : Négation de l’invisibilité. Jet de sauvegarde : inoffensif."
+    "fonctionnement": "Le personnage est capable de fabriquer des objets en métaux divers, comme des épées ou des armures. Ce don s'utilise de plusieurs manières :",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "artisan_tanneur",
+    "nom": "Artisan Tanneur",
+    "type": "Création d'objet",
+    "conditionsCaractéristiques": {
+      "dexterite": 13,
+      "constitution": 10,
+      "creation_armure": 10,
+      "creation_pieges": 10
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage est capable de fabriquer des objets divers en cuir ou tissus, comme des bottes, ceintures, capes et armures ou boucliers de cuir. Ce don s'utilise de plusieurs manières :",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "artisan_menuisier",
+    "nom": "Artisan Menuisier",
+    "type": "Création d'objet",
+    "conditionsCaractéristiques": {
+      "force": 10,
+      "dexterite": 10,
+      "creation_armure": 10,
+      "creation_pieges": 10
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage est capable de fabriquer des objets divers en bois, comme des arcs, boucliers et meubles.",
+    "utilisation": "Automatique"
+  },
+  {
+    "id": "artisan_horloger",
+    "nom": "Artisan Horloger",
+    "type": "Création d'objet",
+    "conditionsCaractéristiques": {
+      "dexterite": 10,
+      "intelligence": 13,
+      "creation_pieges": 10,
+      "savoir": 10
+    },
+    "conditionsId": [],
+    "requisPour": [],
+    "fonctionnement": "Le personnage est capable de fabriquer des objets divers (généralement de petite taille) qui exigent une grande précision, tels que des bijoux, engrenages et autres mécanismes ingénieux.",
+    "utilisation": "Automatique"
   }
 ]

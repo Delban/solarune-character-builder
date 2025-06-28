@@ -1,0 +1,1094 @@
+[
+  {
+    "id": "barbare",
+    "nom": "Barbare",
+    "description": "Le barbare est un guerrier téméraire, puisant dans sa rage pour accroître sa force et sa résistance.",
+    "dés_de_vie": "d12",
+    "compétences": [
+      "création d’armure",
+      "création de piège",
+      "création d’arme",
+      "discipline",
+      "premiers_secours",
+      "intimidation",
+      "perception auditive",
+      "savoir",
+      "parade",
+      "équitation",
+      "raillerie"
+    ],
+    "armes_armures": {
+      "armes": ["simple", "martial"],
+      "armures": ["légère", "moyenne"],
+      "boucliers": true
+    },
+    "progression": [
+      {
+        "niveau": 1,
+        "bonus_attaque": "+1",
+        "jets_sauvegarde": { "Vigueur": "+2", "Réflexes": "+0", "Volonté": "+0" },
+        "dons": ["barbarian_fast_movement", "barbarian_rage (1×/jour)"],
+        "PV": "6–12",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "-"
+      },
+      {
+        "niveau": 2,
+        "bonus_attaque": "+2/+1",
+        "jets_sauvegarde": { "Vigueur": "+3", "Réflexes": "+0", "Volonté": "+0" },
+        "dons": ["uncanny_dodge I"],
+        "PV": "12–24",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "-"
+      },
+      {
+        "niveau": 3,
+        "bonus_attaque": "+3/+2",
+        "jets_sauvegarde": { "Vigueur": "+3", "Réflexes": "+1", "Volonté": "+1" },
+        "dons": [],
+        "PV": "18–36",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "-"
+      },
+      {
+        "niveau": 4,
+        "bonus_attaque": "+4/+3",
+        "jets_sauvegarde": { "Vigueur": "+4", "Réflexes": "+1", "Volonté": "+1" },
+        "dons": ["barbarian_rage (2×/jour)"],
+        "PV": "24–48",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "-"
+      },
+      {
+        "niveau": 5,
+        "bonus_attaque": "+5/+4/+1",
+        "jets_sauvegarde": { "Vigueur": "+4", "Réflexes": "+1", "Volonté": "+1" },
+        "dons": ["uncanny_dodge II"],
+        "PV": "30–60",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "+1"
+      },
+      {
+        "niveau": 6,
+        "bonus_attaque": "+6/+5/+2",
+        "jets_sauvegarde": { "Vigueur": "+5", "Réflexes": "+2", "Volonté": "+2" },
+        "dons": [],
+        "PV": "36–72",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "+1"
+      },
+      {
+        "niveau": 7,
+        "bonus_attaque": "+7/+6/+2",
+        "jets_sauvegarde": { "Vigueur": "+5", "Réflexes": "+2", "Volonté": "+2" },
+        "dons": [],
+        "PV": "42–84",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "+1"
+      },
+      {
+        "niveau": 8,
+        "bonus_attaque": "+8/+7/+3",
+        "jets_sauvegarde": { "Vigueur": "+6", "Réflexes": "+2", "Volonté": "+2" },
+        "dons": ["barbarian_rage (3×/jour)"],
+        "PV": "48–96",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "+1"
+      },
+      {
+        "niveau": 9,
+        "bonus_attaque": "+9/+8/+4",
+        "jets_sauvegarde": { "Vigueur": "+6", "Réflexes": "+3", "Volonté": "+3" },
+        "dons": [],
+        "PV": "54–108",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "+1"
+      },
+      {
+        "niveau": 10,
+        "bonus_attaque": "+10/+9/+5",
+        "jets_sauvegarde": { "Vigueur": "+7", "Réflexes": "+3", "Volonté": "+3" },
+        "dons": ["uncanny_dodge III"],
+        "PV": "60–120",
+        "réduction_dommages": "-",
+        "bonus_réflexe_pièges": "+2"
+      },
+      {
+        "niveau": 11,
+        "bonus_attaque": "+11/+10/+6/+1",
+        "jets_sauvegarde": { "Vigueur": "+7", "Réflexes": "+3", "Volonté": "+3" },
+        "dons": ["damage_reduction I"],
+        "PV": "66–132",
+        "réduction_dommages": "1/-",
+        "bonus_réflexe_pièges": "+2"
+      },
+      {
+        "niveau": 12,
+        "bonus_attaque": "+12/+11/+7/+2",
+        "jets_sauvegarde": { "Vigueur": "+8", "Réflexes": "+4", "Volonté": "+4" },
+        "dons": ["barbarian_rage (4×/jour)"],
+        "PV": "72–144",
+        "réduction_dommages": "1/-",
+        "bonus_réflexe_pièges": "+2"
+      },
+      {
+        "niveau": 13,
+        "bonus_attaque": "+13/+12/+8/+3",
+        "jets_sauvegarde": { "Vigueur": "+8", "Réflexes": "+4", "Volonté": "+4" },
+        "dons": ["uncanny_dodge IV"],
+        "PV": "78–156",
+        "réduction_dommages": "1/-",
+        "bonus_réflexe_pièges": "+3"
+      },
+      {
+        "niveau": 14,
+        "bonus_attaque": "+14/+13/+9/+4",
+        "jets_sauvegarde": { "Vigueur": "+9", "Réflexes": "+4", "Volonté": "+4" },
+        "dons": ["damage_reduction II"],
+        "PV": "84–168",
+        "réduction_dommages": "2/-",
+        "bonus_réflexe_pièges": "+3"
+      },
+      {
+        "niveau": 15,
+        "bonus_attaque": "+15/+14/+10/+5",
+        "jets_sauvegarde": { "Vigueur": "+9", "Réflexes": "+5", "Volonté": "+5" },
+        "dons": ["greater_rage (4×/jour)"],
+        "PV": "90–180",
+        "réduction_dommages": "2/-",
+        "bonus_réflexe_pièges": "+3"
+      },
+      {
+        "niveau": 16,
+        "bonus_attaque": "+16/+15/+11/+6/+1",
+        "jets_sauvegarde": { "Vigueur": "+10", "Réflexes": "+5", "Volonté": "+5" },
+        "dons": ["greater_rage (5×/jour)", "uncanny_dodge V"],
+        "PV": "96–192",
+        "réduction_dommages": "2/-",
+        "bonus_réflexe_pièges": "+4"
+      },
+      {
+        "niveau": 17,
+        "bonus_attaque": "+17/+16/+12/+7/+2",
+        "jets_sauvegarde": { "Vigueur": "+10", "Réflexes": "+5", "Volonté": "+5" },
+        "dons": ["damage_reduction III"],
+        "PV": "102–204",
+        "réduction_dommages": "3/-",
+        "bonus_réflexe_pièges": "+4"
+      },
+      {
+        "niveau": 18,
+        "bonus_attaque": "+18/+17/+13/+8/+3",
+        "jets_sauvegarde": { "Vigueur": "+11", "Réflexes": "+6", "Volonté": "+6" },
+        "dons": [],
+        "PV": "108–216",
+        "réduction_dommages": "3/-",
+        "bonus_réflexe_pièges": "+4"
+      },
+      {
+        "niveau": 19,
+        "bonus_attaque": "+19/+18/+14/+9/+4",
+        "jets_sauvegarde": { "Vigueur": "+11", "Réflexes": "+6", "Volonté": "+6" },
+        "dons": ["uncanny_dodge VI"],
+        "PV": "114–228",
+        "réduction_dommages": "3/-",
+        "bonus_réflexe_pièges": "+5"
+      },
+      {
+        "niveau": 20,
+        "bonus_attaque": "+20/+19/+15/+10/+5",
+        "jets_sauvegarde": { "Vigueur": "+12", "Réflexes": "+6", "Volonté": "+6" },
+        "dons": ["damage_reduction IV", "greater_rage (6×/jour)"],
+        "PV": "120–240",
+        "réduction_dommages": "4/-",
+        "bonus_réflexe_pièges": "+5"
+      }
+    ],
+    "épique": [
+      {
+        "niveau": 21,
+        "dons": [],
+        "PV": "126–252",
+        "réduction_dommages": "4/-",
+        "bonus_réflexe_pièges": "+5"
+      },
+      {
+        "niveau": 22,
+        "dons": [],
+        "PV": "132–264",
+        "réduction_dommages": "4/-",
+        "bonus_réflexe_pièges": "+6"
+      },
+      {
+        "niveau": 23,
+        "dons": ["barbarian_damage_reduction I"],
+        "PV": "138–276",
+        "réduction_dommages": "5/-",
+        "bonus_réflexe_pièges": "+6"
+      },
+      {
+        "niveau": 24,
+        "dons": ["bonus_feat"],
+        "PV": "144–288",
+        "réduction_dommages": "5/-",
+        "bonus_réflexe_pièges": "+6"
+      },
+      {
+        "niveau": 25,
+        "dons": [],
+        "PV": "150–300",
+        "réduction_dommages": "5/-",
+        "bonus_réflexe_pièges": "+7"
+      },
+      {
+        "niveau": 26,
+        "dons": ["barbarian_damage_reduction II"],
+        "PV": "156–312",
+        "réduction_dommages": "6/-",
+        "bonus_réflexe_pièges": "+7"
+      },
+      {
+        "niveau": 27,
+        "dons": [],
+        "PV": "162–324",
+        "réduction_dommages": "6/-",
+        "bonus_réflexe_pièges": "+7"
+      },
+      {
+        "niveau": 28,
+        "dons": ["bonus_feat"],
+        "PV": "168–336",
+        "réduction_dommages": "6/-",
+        "bonus_réflexe_pièges": "+8"
+      },
+      {
+        "niveau": 29,
+        "dons": ["barbarian_damage_reduction III"],
+        "PV": "174–348",
+        "réduction_dommages": "7/-",
+        "bonus_réflexe_pièges": "+8"
+      },
+      {
+        "niveau": 30,
+        "dons": [],
+        "PV": "180–360",
+        "réduction_dommages": "7/-",
+        "bonus_réflexe_pièges": "+8"
+      },
+      {
+        "niveau": 31,
+        "dons": [],
+        "PV": "186–372",
+        "réduction_dommages": "7/-",
+        "bonus_réflexe_pièges": "+9"
+      },
+      {
+        "niveau": 32,
+        "dons": ["bonus_feat", "barbarian_damage_reduction IV"],
+        "PV": "192–384",
+        "réduction_dommages": "8/-",
+        "bonus_réflexe_pièges": "+9"
+      },
+      {
+        "niveau": 33,
+        "dons": [],
+        "PV": "198–396",
+        "réduction_dommages": "8/-",
+        "bonus_réflexe_pièges": "+9"
+      },
+      {
+        "niveau": 34,
+        "dons": [],
+        "PV": "204–408",
+        "réduction_dommages": "8/-",
+        "bonus_réflexe_pièges": "+10"
+      },
+      {
+        "niveau": 35,
+        "dons": ["barbarian_damage_reduction V"],
+        "PV": "210–420",
+        "réduction_dommages": "9/-",
+        "bonus_réflexe_pièges": "+10"
+      },
+      {
+        "niveau": 36,
+        "dons": ["bonus_feat"],
+        "PV": "216–432",
+        "réduction_dommages": "9/-",
+        "bonus_réflexe_pièges": "+10"
+      },
+      {
+        "niveau": 37,
+        "dons": [],
+        "PV": "222–444",
+        "réduction_dommages": "9/-",
+        "bonus_réflexe_pièges": "+11"
+      },
+      {
+        "niveau": 38,
+        "dons": ["barbarian_damage_reduction VI"],
+        "PV": "228–456",
+        "réduction_dommages": "10/-",
+        "bonus_réflexe_pièges": "+11"
+      },
+      {
+        "niveau": 39,
+        "dons": [],
+        "PV": "234–468",
+        "réduction_dommages": "10/-",
+        "bonus_réflexe_pièges": "+11"
+      },
+      {
+        "niveau": 40,
+        "dons": ["bonus_feat"],
+        "PV": "240–480",
+        "réduction_dommages": "10/-",
+        "bonus_réflexe_pièges": "+12"
+      }
+    ]
+  },
+  {
+    "id": "barde",
+    "nom": "Barde",
+    "description": "Le barde allie magie, musique et ruses pour soutenir ses alliés et déstabiliser ses ennemis.",
+    "dés_de_vie": "d6",
+    "compétences": [
+      "estimation",
+      "bluff",
+      "concentration",
+      "création d’armure",
+      "création de piège",
+      "création d’arme",
+      "discipline",
+      "premiers_secours",
+      "discrétion",
+      "perception auditive",
+      "savoir",
+      "déplacement silencieux",
+      "parade",
+      "art du combat monté",
+      "persuasion",
+      "vol à la tire",
+      "connaissance des sorts",
+      "raillerie",
+      "acrobaties",
+      "utilisation des objets magiques"
+    ],
+    "armes_armures": {
+      "armes": ["simple"],
+      "armures": ["légère", "moyenne"],
+      "boucliers": true
+    },
+    "sorts": {
+      "lançable": "arcane",
+      "attribut": "charisme",
+      "cantrips": 4,
+      "progression_par_jour": {
+        "0": [2, 3, 3, 3, 3, 4, 4],
+        "1": [0, 2, 3, 4, 4, 4, 5],
+        "2": [0, 0, 0, 2, 3, 3, 4],
+        "3": [0, 0, 0, 0, 0, 2, 4],
+        "4": [0, 0, 0, 0, 0, 1, 3],
+        "5": [0, 0, 0, 0, 0, 0, 1],
+        "6": [0, 0, 0, 0, 0, 0, 0]
+      },
+      "sorts_connus": {
+        "0": 5,
+        "1": 4,
+        "2": 5,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4
+      }
+    },
+    "progression": [
+      {
+        "niveau": 1,
+        "bonus_attaque": "+0",
+        "jets_sauvegarde": { "Vigueur": "+0", "Réflexes": "+0", "Volonté": "+2" },
+        "dons": ["bardic_knowledge", "bard_song"],
+        "PV": "3–6",
+        "sorts_par_jour": { "0": 2 },
+        "sorts_connus": { "0": 4 }
+      },
+      {
+        "niveau": 2,
+        "bonus_attaque": "+1",
+        "jets_sauvegarde": { "Vigueur": "+0", "Réflexes": "+0", "Volonté": "+3" },
+        "dons": [],
+        "PV": "6–12",
+        "sorts_par_jour": { "0": 3, "1": 2 },
+        "sorts_connus": { "0": 5, "1": 2 }
+      },
+      {
+        "niveau": 3,
+        "bonus_attaque": "+2",
+        "jets_sauvegarde": { "Vigueur": "+1", "Réflexes": "+1", "Volonté": "+3" },
+        "dons": [],
+        "PV": "9–18",
+        "sorts_par_jour": { "0": 3, "1": 3 },
+        "sorts_connus": { "0": 5, "1": 3 }
+      },
+      {
+        "niveau": 4,
+        "bonus_attaque": "+3",
+        "jets_sauvegarde": { "Vigueur": "+1", "Réflexes": "+1", "Volonté": "+4" },
+        "dons": [],
+        "PV": "12–24",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 2 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 2 }
+      },
+      {
+        "niveau": 5,
+        "bonus_attaque": "+3",
+        "jets_sauvegarde": { "Vigueur": "+1", "Réflexes": "+1", "Volonté": "+4" },
+        "dons": [],
+        "PV": "15–30",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 3 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 3 }
+      },
+      {
+        "niveau": 6,
+        "bonus_attaque": "+4",
+        "jets_sauvegarde": { "Vigueur": "+2", "Réflexes": "+2", "Volonté": "+5" },
+        "dons": [],
+        "PV": "18–36",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 3, "3": 2 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 3, "3": 2 }
+      },
+      {
+        "niveau": 7,
+        "bonus_attaque": "+5",
+        "jets_sauvegarde": { "Vigueur": "+2", "Réflexes": "+2", "Volonté": "+5" },
+        "dons": [],
+        "PV": "21–42",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 3, "3": 2 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 2 }
+      },
+      {
+        "niveau": 8,
+        "bonus_attaque": "+6/+1",
+        "jets_sauvegarde": { "Vigueur": "+2", "Réflexes": "+2", "Volonté": "+6" },
+        "dons": [],
+        "PV": "24–48",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 3, "3": 3, "4": 1 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 3, "4": 1 }
+      },
+      {
+        "niveau": 9,
+        "bonus_attaque": "+6/+1",
+        "jets_sauvegarde": { "Vigueur": "+3", "Réflexes": "+3", "Volonté": "+6" },
+        "dons": [],
+        "PV": "27–54",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 3, "3": 3, "4": 2 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 3, "4": 3 }
+      },
+      {
+        "niveau": 10,
+        "bonus_attaque": "+7/+2",
+        "jets_sauvegarde": { "Vigueur": "+3", "Réflexes": "+3", "Volonté": "+7" },
+        "dons": [],
+        "PV": "30–60",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 3, "3": 3, "4": 2, "5": 0 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 3, "4": 3, "5": 0 }
+      },
+      {
+        "niveau": 11,
+        "bonus_attaque": "+8/+3",
+        "jets_sauvegarde": { "Vigueur": "+3", "Réflexes": "+3", "Volonté": "+7" },
+        "dons": [],
+        "PV": "33–66",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 3, "3": 3, "4": 3, "5": 1 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 3, "4": 3, "5": 1 }
+      },
+      {
+        "niveau": 12,
+        "bonus_attaque": "+9/+4",
+        "jets_sauvegarde": { "Vigueur": "+4", "Réflexes": "+4", "Volonté": "+8" },
+        "dons": [],
+        "PV": "36–72",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 3, "3": 3, "4": 3, "5": 2 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 3, "4": 3, "5": 2 }
+      },
+      {
+        "niveau": 13,
+        "bonus_attaque": "+9/+4",
+        "jets_sauvegarde": { "Vigueur": "+4", "Réflexes": "+4", "Volonté": "+8" },
+        "dons": [],
+        "PV": "39–78",
+        "sorts_par_jour": { "0": 3, "1": 3, "2": 3, "3": 3, "4": 3, "5": 2, "6": 0 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 3, "4": 4, "5": 2, "6": 0 }
+      },
+      {
+        "niveau": 14,
+        "bonus_attaque": "+10/+5",
+        "jets_sauvegarde": { "Vigueur": "+4", "Réflexes": "+4", "Volonté": "+9" },
+        "dons": [],
+        "PV": "42–84",
+        "sorts_par_jour": { "0": 4, "1": 3, "2": 3, "3": 3, "4": 3, "5": 3, "6": 1 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 3, "4": 4, "5": 3, "6": 1 }
+      },
+      {
+        "niveau": 15,
+        "bonus_attaque": "+11/+6/+1",
+        "jets_sauvegarde": { "Vigueur": "+5", "Réflexes": "+4", "Volonté": "+9" },
+        "dons": [],
+        "PV": "45–90",
+        "sorts_par_jour": { "0": 4, "1": 4, "2": 3, "3": 3, "4": 3, "5": 3, "6": 2 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 4, "4": 4, "5": 3, "6": 2 }
+      },
+      {
+        "niveau": 16,
+        "bonus_attaque": "+12/+7/+2",
+        "jets_sauvegarde": { "Vigueur": "+5", "Réflexes": "+5", "Volonté": "+10" },
+        "dons": [],
+        "PV": "48–96",
+        "sorts_par_jour": { "0": 4, "1": 4, "2": 4, "3": 3, "4": 3, "5": 3, "6": 2, "7": 0 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 4, "3": 4, "4": 4, "5": 4, "6": 2, "7": 0 }
+      },
+      {
+        "niveau": 17,
+        "bonus_attaque": "+12/+7/+2",
+        "jets_sauvegarde": { "Vigueur": "+5", "Réflexes": "+5", "Volonté": "+10" },
+        "dons": [],
+        "PV": "51–102",
+        "sorts_par_jour": { "0": 4, "1": 4, "2": 4, "3": 3, "4": 3, "5": 3, "6": 3, "7": 1 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 5, "3": 4, "4": 4, "5": 4, "6": 2, "7": 1 }
+      },
+      {
+        "niveau": 18,
+        "bonus_attaque": "+13/+8/+3",
+        "jets_sauvegarde": { "Vigueur": "+6", "Réflexes": "+5", "Volonté": "+11" },
+        "dons": [],
+        "PV": "54–108",
+        "sorts_par_jour": { "0": 4, "1": 4, "2": 4, "3": 4, "4": 3, "5": 3, "6": 3, "7": 2 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 5, "3": 4, "4": 4, "5": 4, "6": 3, "7": 2 }
+      },
+      {
+        "niveau": 19,
+        "bonus_attaque": "+14/+9/+4",
+        "jets_sauvegarde": { "Vigueur": "+6", "Réflexes": "+6", "Volonté": "+11" },
+        "dons": [],
+        "PV": "57–114",
+        "sorts_par_jour": { "0": 4, "1": 4, "2": 4, "3": 4, "4": 3, "5": 3, "6": 3, "7": 2, "8": 0 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 5, "3": 4, "4": 4, "5": 4, "6": 3, "7": 2, "8": 0 }
+      },
+      {
+        "niveau": 20,
+        "bonus_attaque": "+15/+10/+5",
+        "jets_sauvegarde": { "Vigueur": "+6", "Réflexes": "+6", "Volonté": "+12" },
+        "dons": [],
+        "PV": "60–120",
+        "sorts_par_jour": { "0": 4, "1": 4, "2": 4, "3": 4, "4": 4, "5": 3, "6": 3, "7": 2, "8": 0, "9": 0 },
+        "sorts_connus": { "0": 5, "1": 5, "2": 5, "3": 4, "4": 4, "5": 4, "6": 3, "7": 2, "8": 0, "9": 0 }
+      }
+    ],
+    "épique": [
+      {
+        "niveau": 21,
+        "dons": [],
+        "PV": "63–126",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 22,
+        "dons": [],
+        "PV": "66–132",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 23,
+        "dons": ["bonus_feat"],
+        "PV": "69–138",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 24,
+        "dons": [],
+        "PV": "72–144",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 25,
+        "dons": [],
+        "PV": "75–150",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 26,
+        "dons": ["bonus_feat"],
+        "PV": "78–156",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 27,
+        "dons": [],
+        "PV": "81–162",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 28,
+        "dons": [],
+        "PV": "84–168",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 29,
+        "dons": ["bonus_feat"],
+        "PV": "87–174",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 30,
+        "dons": [],
+        "PV": "90–180",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 31,
+        "dons": [],
+        "PV": "93–186",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 32,
+        "dons": ["bonus_feat"],
+        "PV": "96–192",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 33,
+        "dons": [],
+        "PV": "99–198",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 34,
+        "dons": [],
+        "PV": "102–204",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 35,
+        "dons": ["bonus_feat"],
+        "PV": "105–210",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 36,
+        "dons": [],
+        "PV": "108–216",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 37,
+        "dons": [],
+        "PV": "111–222",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 38,
+        "dons": ["bonus_feat"],
+        "PV": "114–228",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 39,
+        "dons": [],
+        "PV": "117–234",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 40,
+        "dons": [],
+        "PV": "120–240",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      }
+    ]
+  },
+  {
+    "id": "prêtre",
+    "nom": "Prêtre",
+    "description": "Le prêtre sert d’intermédiaire entre le divin et le mortel, lançant des sorts sacrés et bénéficiant du pouvoir de son dieu.",
+    "dés_de_vie": "d8",
+    "compétences": [
+      "concentration",
+      "création d’armure",
+      "création de piège",
+      "création d’arme",
+      "premiers_secours",
+      "savoir",
+      "parade",
+      "persuasion",
+      "connaissance des sorts"
+    ],
+    "armes_armures": {
+      "armes": ["simple"],
+      "armures": ["légère", "moyenne", "lourde"],
+      "boucliers": true
+    },
+    "sorts": {
+      "lançable": "divin",
+      "attribut": "sagesse",
+      "ruche_de_sorts": true,
+      "progression_par_jour": {
+        "0": [3, 4, 4, 4, 4, 4, 4],
+        "1": [2, 4, 4, 4, 4, 4, 4],
+        "2": [null, 4, 4, 4, 4, 4, 4],
+        "3": [null, null, 4, 4, 4, 4, 4],
+        "4": [null, null, null, 4, 4, 4, 4],
+        "5": [null, null, null, null, 4, 4, 4],
+        "6": [null, null, null, null, null, 4, 4],
+        "7": [null, null, null, null, null, null, 4],
+        "8": [null, null, null, null, null, null, null],
+        "9": [null, null, null, null, null, null, null]
+      },
+      "sorts_connus": null
+    },
+    "progression": [
+      {
+        "niveau": 1,
+        "bonus_attaque": "+0",
+        "jets_sauvegarde": { "Vigueur": "+2", "Réflexes": "+0", "Volonté": "+2" },
+        "dons": ["turn_undead"],
+        "PV": "4–8",
+        "sorts_par_jour": { "0": 3, "1": 2 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 2,
+        "bonus_attaque": "+1",
+        "jets_sauvegarde": { "Vigueur": "+3", "Réflexes": "+0", "Volonté": "+3" },
+        "dons": [],
+        "PV": "8–16",
+        "sorts_par_jour": { "0": 4, "1": 3 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 3,
+        "bonus_attaque": "+2",
+        "jets_sauvegarde": { "Vigueur": "+3", "Réflexes": "+1", "Volonté": "+3" },
+        "dons": [],
+        "PV": "12–24",
+        "sorts_par_jour": { "0": 4, "1": 3, "2": 2 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 4,
+        "bonus_attaque": "+3",
+        "jets_sauvegarde": { "Vigueur": "+4", "Réflexes": "+1", "Volonté": "+4" },
+        "dons": [],
+        "PV": "16–32",
+        "sorts_par_jour": { "0": 5, "1": 4, "2": 3, "3": 2 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 5,
+        "bonus_attaque": "+3",
+        "jets_sauvegarde": { "Vigueur": "+4", "Réflexes": "+1", "Volonté": "+4" },
+        "dons": [],
+        "PV": "20–40",
+        "sorts_par_jour": { "0": 5, "1": 4, "2": 3, "3": 2, "4": 1 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 6,
+        "bonus_attaque": "+4",
+        "jets_sauvegarde": { "Vigueur": "+5", "Réflexes": "+2", "Volonté": "+5" },
+        "dons": [],
+        "PV": "24–48",
+        "sorts_par_jour": { "0": 5, "1": 4, "2": 4, "3": 3, "4": 2, "5": 0 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 7,
+        "bonus_attaque": "+5",
+        "jets_sauvegarde": { "Vigueur": "+5", "Réflexes": "+2", "Volonté": "+5" },
+        "dons": [],
+        "PV": "28–56",
+        "sorts_par_jour": { "0": 6, "1": 5, "2": 4, "3": 3, "4": 2, "5": 1, "6": 0 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 8,
+        "bonus_attaque": "+6/+1",
+        "jets_sauvegarde": { "Vigueur": "+6", "Réflexes": "+2", "Volonté": "+6" },
+        "dons": [],
+        "PV": "32–64",
+        "sorts_par_jour": { "0": 6, "1": 5, "2": 4, "3": 3, "4": 2, "5": 1, "6": 0, "7": 0 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 9,
+        "bonus_attaque": "+6/+1",
+        "jets_sauvegarde": { "Vigueur": "+6", "Réflexes": "+3", "Volonté": "+6" },
+        "dons": [],
+        "PV": "36–72",
+        "sorts_par_jour": { "0": 6, "1": 5, "2": 5, "3": 4, "4": 3, "5": 2, "6": 1, "7": 0 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 10,
+        "bonus_attaque": "+7/+2",
+        "jets_sauvegarde": { "Vigueur": "+7", "Réflexes": "+3", "Volonté": "+7" },
+        "dons": [],
+        "PV": "40–80",
+        "sorts_par_jour": { "0": 6, "1": 5, "2": 5, "3": 4, "4": 3, "5": 2, "6": 1, "7": 1 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 11,
+        "bonus_attaque": "+8/+3",
+        "jets_sauvegarde": { "Vigueur": "+7", "Réflexes": "+3", "Volonté": "+7" },
+        "dons": [],
+        "PV": "44–88",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 5, "3": 5, "4": 4, "5": 3, "6": 2, "7": 1, "8": 0 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 12,
+        "bonus_attaque": "+9/+4",
+        "jets_sauvegarde": { "Vigueur": "+8", "Réflexes": "+4", "Volonté": "+8" },
+        "dons": [],
+        "PV": "48–96",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 5, "3": 5, "4": 4, "5": 3, "6": 2, "7": 1, "8": 1 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 13,
+        "bonus_attaque": "+9/+4",
+        "jets_sauvegarde": { "Vigueur": "+8", "Réflexes": "+4", "Volonté": "+8" },
+        "dons": [],
+        "PV": "52–104",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 6, "3": 5, "4": 5, "5": 4, "6": 3, "7": 2, "8": 0, "9": 0 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 14,
+        "bonus_attaque": "+10/+5",
+        "jets_sauvegarde": { "Vigueur": "+9", "Réflexes": "+4", "Volonté": "+9" },
+        "dons": [],
+        "PV": "56–112",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 6, "3": 5, "4": 5, "5": 4, "6": 3, "7": 2, "8": 1, "9": 0 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 15,
+        "bonus_attaque": "+11/+6/+1",
+        "jets_sauvegarde": { "Vigueur": "+9", "Réflexes": "+5", "Volonté": "+9" },
+        "dons": [],
+        "PV": "60–120",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 6, "3": 6, "4": 5, "5": 5, "6": 4, "7": 3, "8": 2, "9": 0 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 16,
+        "bonus_attaque": "+12/+7/+2",
+        "jets_sauvegarde": { "Vigueur": "+10", "Réflexes": "+5", "Volonté": "+10" },
+        "dons": [],
+        "PV": "64–128",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 6, "3": 6, "4": 5, "5": 5, "6": 4, "7": 3, "8": 3, "9": 0 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 17,
+        "bonus_attaque": "+12/+7/+2",
+        "jets_sauvegarde": { "Vigueur": "+10", "Réflexes": "+5", "Volonté": "+10" },
+        "dons": [],
+        "PV": "68–136",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 6, "3": 6, "4": 6, "5": 5, "6": 5, "7": 4, "8": 3, "9": 2 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 18,
+        "bonus_attaque": "+13/+8/+3",
+        "jets_sauvegarde": { "Vigueur": "+11", "Réflexes": "+6", "Volonté": "+11" },
+        "dons": [],
+        "PV": "72–144",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 6, "3": 6, "4": 6, "5": 5, "6": 5, "7": 4, "8": 4, "9": 3 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 19,
+        "bonus_attaque": "+14/+9/+4",
+        "jets_sauvegarde": { "Vigueur": "+11", "Réflexes": "+6", "Volonté": "+11" },
+        "dons": [],
+        "PV": "76–152",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 6, "3": 6, "4": 6, "5": 6, "6": 5, "7": 5, "8": 4, "9": 4 },
+        "sorts_connus": null
+      },
+      {
+        "niveau": 20,
+        "bonus_attaque": "+15/+10/+5",
+        "jets_sauvegarde": { "Vigueur": "+12", "Réflexes": "+6", "Volonté": "+12" },
+        "dons": [],
+        "PV": "80–160",
+        "sorts_par_jour": { "0": 6, "1": 6, "2": 6, "3": 6, "4": 6, "5": 6, "6": 5, "7": 5, "8": 5, "9": 5 },
+        "sorts_connus": null
+      }
+    ],
+    "épique": [
+      {
+        "niveau": 21,
+        "dons": [],
+        "PV": "84–168",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 22,
+        "dons": [],
+        "PV": "88–176",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 23,
+        "dons": ["bonus_feat"],
+        "PV": "92–184",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 24,
+        "dons": [],
+        "PV": "96–192",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 25,
+        "dons": [],
+        "PV": "100–200",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 26,
+        "dons": ["bonus_feat"],
+        "PV": "104–208",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 27,
+        "dons": [],
+        "PV": "108–216",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 28,
+        "dons": [],
+        "PV": "112–224",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 29,
+        "dons": ["bonus_feat"],
+        "PV": "116–232",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 30,
+        "dons": [],
+        "PV": "120–240",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 31,
+        "dons": [],
+        "PV": "124–248",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 32,
+        "dons": ["bonus_feat"],
+        "PV": "128–256",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 33,
+        "dons": [],
+        "PV": "132–264",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 34,
+        "dons": [],
+        "PV": "136–272",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 35,
+        "dons": ["bonus_feat"],
+        "PV": "140–280",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 36,
+        "dons": [],
+        "PV": "144–288",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 37,
+        "dons": [],
+        "PV": "148–296",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 38,
+        "dons": ["bonus_feat"],
+        "PV": "152–304",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 39,
+        "dons": [],
+        "PV": "156–312",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      },
+      {
+        "niveau": 40,
+        "dons": [],
+        "PV": "160–320",
+        "bonus_attaque": "",
+        "jets_sauvegarde": { "Vigueur": "", "Réflexes": "", "Volonté": "" }
+      }
+    ]
+  }
+]

@@ -1,0 +1,796 @@
+[
+  {
+    "id": "forme_d_arbre",
+    "nom": "Forme d'arbre",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Druide": 2,
+      "Rôdeur": 3
+    },
+    "composantes": ["V", "G", "FD"],
+    "tempsIncantation": "1 action simple",
+    "portee": "personnelle",
+    "cible": "le jeteur de sorts",
+    "duree": "1 heure/niveau",
+    "fonctionnement": "Grâce à ce sort, le personnage peut prendre la forme d’un petit arbre vivant, d’un buisson, ou encore d’un tronc d’arbre mort doté de quelques branches. Même en l’inspectant de près, il est impossible de déceler que ce qui ressemble à un arbre est en réalité une créature camouflée par magie. Tout montre que le personnage est bien un arbre (ou un buisson), même si détection de la magie révèle une légère aura de transmutation (ATTENTION : sort à vocation RP. Les créatures ennemies vous détecteront et vous attaqueront toujours). Le druide (ou le rôdeur) est conscient de tout ce qui l’entoure. Ses sens, points de vie et jets de sauvegarde restent les mêmes que sous sa forme d’origine. Il bénéficie d’un bonus d’armure naturelle de +10 à la CA, mais sa valeur de Dextérité effective tombe à 3. Sa vitesse de déplacement est de 0 mètre. Il est immunisé contre les coups critiques et aux attaques sournoises mais subit une vulnérabilité au feu de 50 %. Ses vêtements et tout ce qu’il tient ou porte se transforment avec lui.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "grand_tertres",
+    "nom": "Grand Tertre",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Druide": 9
+    },
+    "composantes": ["V", "G"],
+    "tempsIncantation": "1 action simple",
+    "portee": "moyenne (30 m + 3 m/niveau)",
+    "duree": "1 heure/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Grand tertre crée 1 tertre errant ayant 25 DV. Ce dernier combat pour le personnage, remplit une mission pour lui ou lui sert de garde du corps. Il reste à ses côtés à moins qu’il ne s'éloigne du lieu d'invocation. Il ne peut pas s’éloigner au-delà des limites de portée, le centre de l’effet du sort étant le point où la créature est apparue. Si le lanceur de sort s'éloigne de la zone d'effet, le tertre retourne à son lieu d'invocation et protège l'endroit pendant toute la durée restante du sort.\nCe sort ne peut être utilisé qu'en milieu naturel et en extérieur.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "portail_mineur",
+    "nom": "Portail mineur",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Prêtre": 9,
+      "Magicien": 9,
+      "Ensorceleur": 9
+    },
+    "niveauInne": 9,
+    "ecole": "Invocation",
+    "composantes": ["verbale", "gestuelle"],
+    "tempsIncantation": "3 rounds",
+    "portee": "moyenne",
+    "zoneEffetCible": "point désigné",
+    "duree": "variable (voir description)",
+    "jetSauvegarde": "inoffensif",
+    "resistanceMagie": "non",
+    "fonctionnement": "Le lanceur de sorts invoque un allié planaire de son choix ayant jusqu'à 12 DV, plus 1 DV par niveau de lanceur de sorts (maximum 35) et qu'il a préalablement choisi via le « menu repos » (le don « Négociation de Contrats » est requis). L'invocation échoue s'il tente de faire appel à un allié dépassant cette limite. La durée est d'1 heure/niveau pour les créatures < 25 DV, et d'1 minute tous les niveaux (voire tous les deux niveaux) pour les invocations plus puissantes.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "sort_epique_portail",
+    "nom": "Sort épique : Portail",
+    "type": "Sort Ajouté",
+    "fonctionnement": "Le lanceur de sorts invoque un allié planaire de son choix qu'il a préalablement choisi via le « menu repos » (le don « Négociation de Contrats » est requis). L'invocation échoue s'il tente de faire appel à un allié ayant plus de DV (dés de vie ou niveau global) que la limite imposée par ce sort. La durée est d'1 heure/niveau pour des créatures < 35 DV et d'1 minute tous les niveaux (voire tous les deux niveaux) pour des invocations plus puissantes.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "contrat",
+    "nom": "Contrat",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 5,
+      "Ensorceleur": 5,
+      "Barde": 5
+    },
+    "niveauInne": 5,
+    "ecole": "Invocation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "zoneEffetCible": "1 créature ou point désigné",
+    "duree": "variable (voir description)",
+    "contresortSupplementaire": "Renvoi",
+    "jetSauvegarde": "Volonté, annule",
+    "resistanceMagie": "non",
+    "fonctionnement": "Ce sort peut s’utiliser de deux manières : contre une unique créature extra-planaire (paralysée 1 round/2 niveaux du lanceur) ou pour invoquer un allié extra-planaire de jusqu'à 6 DV + 1 DV par niveau de lanceur (max 20). L’invocation échoue si la créature excède cette limite. La durée est d'1 heure/niveau pour < 25 DV et d'1 minute tous les niveaux (voire tous les deux niveaux) pour les invocations plus puissantes.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "contrat_intermediaire",
+    "nom": "Contrat intermédiaire",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 6,
+      "Ensorceleur": 6,
+      "Barde": 6
+    },
+    "niveauInne": 6,
+    "ecole": "Invocation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "zoneEffetCible": "1 créature ou point désigné",
+    "duree": "variable (voir description)",
+    "contresortSupplementaire": "Renvoi",
+    "jetSauvegarde": "Volonté (–2), annule",
+    "resistanceMagie": "non",
+    "fonctionnement": "Fonctionne comme Contrat V, mais permet jusqu'à 8 DV + 1 DV/niveau (max 25). Les extra-planaires visés sont paralysés 1 round/2 niveaux du lanceur. L’invocation suit les mêmes règles de durée et d’échec.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "contrat_supreme",
+    "nom": "Contrat suprême",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 8,
+      "Ensorceleur": 8
+    },
+    "niveauInne": 8,
+    "ecole": "Invocation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "zoneEffetCible": "1 créature ou point désigné",
+    "duree": "variable (voir description)",
+    "contresortSupplementaire": "Renvoi",
+    "jetSauvegarde": "Volonté (–5), annule",
+    "resistanceMagie": "non",
+    "fonctionnement": "Fonctionne comme Contrat V/VI, mais permet jusqu'à 10 DV + 1 DV/niveau (max 30). Durée selon PV d’invocation : 1 h/niveau si < 25 DV, 1 min tous les niveaux (voire tous les 2 niveaux) sinon.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "allie_majeur_outreplan",
+    "nom": "Allié majeur d'Outreplan",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Prêtre": 6,
+      "Paladin": 4
+    },
+    "niveauInne": 6,
+    "ecole": "Invocation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "personnelle",
+    "zoneEffetCible": "lanceur",
+    "duree": "variable (voir description)",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Le lanceur invoque un allié planaire jusqu'à 8 DV + 1 DV/niveau (max 25), choisi via le « menu repos ». L’invocation échoue si la créature dépasse cette limite. Durée : 1 h/niveau si < 25 DV, 1 min tous les niveaux (voire tous les 2 niveaux) sinon.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "porte_dimensionnelle",
+    "nom": "Porte dimensionnelle",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 4,
+      "Ensorceleur": 4
+    },
+    "niveauInne": 4,
+    "ecole": "Invocation",
+    "categories": ["Téléportation"],
+    "composantes": ["verbale"],
+    "portee": "longue",
+    "zoneEffetCible": "le lanceur de sorts et les alliés touchés",
+    "duree": "instantanée",
+    "jetSauvegarde": "inoffensif",
+    "resistanceMagie": "non",
+    "fonctionnement": "Cette incantation permet de se déplacer instantanément jusqu’à un point situé à portée. Le personnage arrive toujours à l’endroit choisi, soit en le visualisant, soit en indiquant ses coordonnées. Un portail reste 10 s à la position de départ, permettant aux alliés de suivre.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "vol",
+    "nom": "Vol",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 3,
+      "Ensorceleur": 3
+    },
+    "niveauInne": 3,
+    "ecole": "Transmutation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "contact",
+    "zoneEffetCible": "personnelle",
+    "duree": "10 minutes/niveau",
+    "jetSauvegarde": "inoffensif",
+    "resistanceMagie": "non",
+    "fonctionnement": "Le personnage devient capable de voler (manoœuvrabilité excellente) : +20 % vitesse, +2 à la CA d’esquive et Réflexes, +10 à l’Acrobatie (intérieur/ou extérieur). En vol longue durée, il peut parcourir ~10 km/h.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "desintegration",
+    "nom": "Désintégration",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 5,
+      "Ensorceleur": 5
+    },
+    "niveauInne": 5,
+    "ecole": "Transmutation",
+    "categories": ["Destruction"],
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "moyenne",
+    "zoneEffetCible": "créature visée",
+    "duree": "instantanée",
+    "jetSauvegarde": "Vigueur, partiel",
+    "resistanceMagie": "oui",
+    "fonctionnement": "Un rayon vert émeraude inflige 2d6 points de dégâts par niveau de lanceur (max 40d6). Sauvegarde réussie : 5d6. Désintègre objets jusqu’à un cube de 3 m d’arête. Affecte les murs de force mais pas les effets magiques. Les créatures à 0 PV sont réduites en poussière.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "linceul_de_mort_vivant",
+    "nom": "Linceul de mort-vivant",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 3,
+      "Magicien": 2,
+      "Ensorceleur": 2
+    },
+    "niveauInne": 2,
+    "ecole": "Nécromancie",
+    "categories": ["Mort"],
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "contact",
+    "zoneEffetCible": "créature touchée",
+    "duree": "10 minutes/niveau",
+    "jetSauvegarde": "inoffensif",
+    "resistanceMagie": "non",
+    "fonctionnement": "Enveloppe la cible d’énergie négative pour tromper les morts-vivants stupides. Immunité 50 % aux effets négatifs, +5 aux jets de sauvegarde négatifs, mais vulnérabilité 50 % aux effets positifs et –5 aux jets de sauvegarde positifs. Le linceul se dissipe si la cible attaque.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "simulacre",
+    "nom": "Simulacre",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 9,
+      "Ensorceleur": 9
+    },
+    "niveauInne": 9,
+    "ecole": "Illusion",
+    "composantes": ["verbale", "gestuelle", "matérielle"],
+    "tempsIncantation": "30 secondes",
+    "portee": "contact",
+    "zoneEffetCible": "allié touché",
+    "duree": "5 heures/niveau",
+    "jetSauvegarde": "Volonté, révèle",
+    "resistanceMagie": "non",
+    "fonctionnement": "Après avoir sculpté l'argile en forme de la cible et mémorisé ses traits, l’argile devient un simulacre semi-réel (sonore, olfactif, tactile, thermique). Le sort échoue si la cible refuse la copie. Le simulacre peut interagir avec l’environnement comme l’original.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "dedale",
+    "nom": "Dédale",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 9,
+      "Ensorceleur": 9
+    },
+    "niveauInne": 9,
+    "ecole": "Invocation",
+    "categories": ["Téléportation"],
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "zoneEffetCible": "créature visée",
+    "duree": "voir description",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Crée un labyrinthe de force extra-dimensionnel et y emprisonne la cible. Elle peut tenter un test d'Intelligence (DD 15) : réussite → fuite en 5 rounds, échec → perte de 3d4 minutes. Sorts de téléportation intra-plan ne fonctionnent pas, mais changement de plan permet de sortir. Les minotaures sont immunisés.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "communication_a_distance",
+    "nom": "Communication à distance",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 5,
+      "Ensorceleur": 5,
+      "Prêtre": 4
+    },
+    "niveauInne": 5,
+    "ecole": "Evocation",
+    "tempsIncantation": "1 minute",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "10 km/niveau",
+    "zoneEffetCible": "créature visée",
+    "duree": "1 round",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Permet d'envoyer un message privé de ~30 mots dans une langue maîtrisée. La cible, si déjà rencontrée, reconnaît l'émetteur et peut répondre immédiatement. Le sort échoue si la cible est hors de portée ou hors de son plan, sans distinction d’échec.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "image_accomplie",
+    "nom": "Image accomplie",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 3,
+      "Ensorceleur": 3,
+      "Barde": 3
+    },
+    "niveauInne": 3,
+    "ecole": "Illusion",
+    "categories": ["chimère"],
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "moyenne",
+    "zoneEffetCible": "illusion (max 4 cubes de 3 m + 1 cube/niveau)",
+    "duree": "1 tour/niveau",
+    "jetSauvegarde": "Volonté, dévoile (interaction)",
+    "resistanceMagie": "non",
+    "fonctionnement": "Génère une illusion visuelle, sonore, olfactive et thermique d’un objet, d’une créature ou d’un effet magique. Sur créature : double illusoire inoffensif disparaissant au moindre dommage. Sur zone : brume violette restreint mouvements, jet de Volonté chaque round pour se libérer. Une zone à la fois.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "serviteur_magique",
+    "nom": "Serviteur Magique",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 7,
+      "Ensorceleur": 7,
+      "Barde": 6
+    },
+    "niveauInne": 7,
+    "ecole": "Illusion",
+    "categories": ["ombre"],
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "duree": "10 tours/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Crée un serviteur d’énergie d’ombre doté de connaissances basiques (tâches ménagères, garde du corps). Composé d’énergie du plan de l’ombre, il possède une consistance réelle.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "metamorphose_funeste",
+    "nom": "Métamorphose funeste",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 5,
+      "Ensorceleur": 5,
+      "Druide": 5
+    },
+    "niveauInne": 5,
+    "ecole": "Transmutation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "moyenne",
+    "zoneEffetCible": "1 créature",
+    "duree": "1 jour/niveau",
+    "contresortSupplementaire": "Délivrance des malédictions",
+    "jetSauvegarde": "Vigueur",
+    "resistanceMagie": "oui",
+    "fonctionnement": "Si la cible échoue son jet de sauvegarde, elle se transforme en forme choisie via le grimoire de métamorphe. Seul Délivrance des malédictions peut inverser l’effet.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "deguisement",
+    "nom": "Déguisement",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 1,
+      "Ensorceleur": 1,
+      "Barde": 1
+    },
+    "niveauInne": 1,
+    "ecole": "Illusion",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "personnelle",
+    "zoneEffetCible": "le lanceur",
+    "duree": "10 minutes/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Le personnage change d’apparence (vêtements, armure, armes, équipement), modifie sa taille ±30 cm, poids, traits mineurs. Ne confère pas pouvoirs ou particularités tactiles/auditives. Toute interaction autorise un jet de Volonté (DD 10 + niveau) pour percer l’illusion.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "modification_apparence",
+    "nom": "Modification d'apparence",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Ensorceleur": 2,
+      "Mage": 2,
+      "Barde": 2
+    },
+    "niveauInne": 2,
+    "ecole": "Transmutation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "personnelle",
+    "cible": "le lanceur",
+    "duree": "10 minutes/niveau",
+    "fonctionnement": "Le personnage change d’apparence (vêtements, armure, armes, équipement), modifie taille ±30 cm, poids, traits mineurs. Contrairement à Déguisement, ce n’est pas une illusion : toute interaction ne donne pas droit à un jet de Volonté. Seule Vision lucide révèle la véritable apparence.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "analyse_d_enchantement",
+    "nom": "Analyse d'enchantement",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 6,
+      "Ensorceleur": 6,
+      "Barde": 6
+    },
+    "niveauInne": 6,
+    "ecole": "Divination",
+    "composantes": ["verbale", "gestuelle", "matérielle"],
+    "portee": "courte",
+    "zoneEffetCible": "créature ou objet visé",
+    "duree": "1 round",
+    "jetSauvegarde": "Volonté (voir description)",
+    "resistanceMagie": "non",
+    "fonctionnement": "Ce sort permet d’identifier la magie affectant la cible, qu’il s’agisse d’une créature ou d’un objet. Un sort ou pouvoir se révèle tous les 5 niveaux de lanceur. Pour un objet magique, on découvre ses fonctions, son mode d’activation et ses charges. Pour une créature ou un objet affecté, on apprend la nature, les effets et le niveau de lanceur de chaque sort actif. Un objet porté peut résister par un jet de Volonté ; en cas de succès, il ne peut plus être analysé pendant 24 heures. Ce sort échoue sur les artefacts ou certaines structures magiques extrêmement complexes ou massives.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "detection_de_la_magie",
+    "nom": "Détection de la magie",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Prêtre": 0,
+      "Druide": 0,
+      "Magicien": 0,
+      "Ensorceleur": 0,
+      "Barde": 0
+    },
+    "niveauInne": 0,
+    "ecole": "Universelle",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "18 mètres",
+    "zoneEffetCible": "émanation en forme de cône",
+    "duree": "concentration, jusqu'à 1 minute/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Permet de déceler les auras magiques. Premier round : présence ou absence d’auras. Deuxième : nombre d’auras et intensité de la plus puissante. Troisième : localisation et intensité de chaque aura, avec possibilité de tests d’Art de la magie (DD 20 + niveau) pour identifier l’école de chaque effet. Les auras puissantes ou émanations locales peuvent masquer les plus faibles. L’intensité dépend du sort ou du niveau du lanceur ; une aura persiste après dissipation de sa source. Classification des auras : faibles (≤ 3ᵉ cercle/objets inférieurs, 1d6 rounds), modérées (4ᵉ–6ᵉ cercle/objets moyens, 1d6 minutes), puissantes (7ᵉ–9ᵉ cercle/objets supérieurs, 1d6×10 minutes), surpuissantes (> 10ᵉ cercle/artéfacts, 1d6 jours).",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "vision_magique",
+    "nom": "Vision magique",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 3,
+      "Ensorceleur": 3
+    },
+    "niveauInne": 3,
+    "ecole": "Divination",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "personnelle",
+    "zoneEffetCible": "le jeteur de sorts",
+    "duree": "1 minute/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Le lanceur voit instantanément les auras magiques dans un rayon de 36 m sans concentration, distinguant localisation et intensité. Il peut tenter un test d’Art de la magie (DD 20 + niveau) pour déterminer l’école de chaque aura. En se concentrant sur une créature (action simple), il sait si elle possède des pouvoirs magiques ou capacités de jeteur et la force du sort ou pouvoir le plus puissant qu’elle peut utiliser. Peut être trompeur si le lanceur a déjà dépensé une grande partie de ses pouvoirs journaliers.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "localisation_d_objet",
+    "nom": "Localisation d'objet",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Prêtre": 2,
+      "Magicien": 2,
+      "Ensorceleur": 2,
+      "Barde": 2
+    },
+    "niveauInne": 2,
+    "ecole": "Divination",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "longue",
+    "zoneEffetCible": "cercle de 120 m de rayon + 12 m/niveau, centré sur le lanceur",
+    "duree": "1 minute/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Indique la direction d’un objet connu ou visualisé mentalement. Peut cibler une catégorie générale (renvoie l’objet le plus proche) ou un objet spécifique vu auparavant. Bloqué par le plomb, n’affecte pas les êtres vivants ni les objets transmutés.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "lien_telepathique",
+    "nom": "Lien télépathique",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 5,
+      "Ensorceleur": 5
+    },
+    "niveauInne": 5,
+    "ecole": "Divination",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "zoneEffetCible": "le lanceur et 1 créature consentante tous les 5 niveaux",
+    "duree": "10 minutes/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Établit un lien télépathique entre le lanceur (optionnel) et jusqu’à une créature consentante tous les 5 niveaux, permettant la communication même sans partage de langue, tant que les participants sont sur le même plan.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "telekinesie",
+    "nom": "Télékinésie",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 5,
+      "Ensorceleur": 5
+    },
+    "niveauInne": 5,
+    "ecole": "Transmutation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "moyenne",
+    "zoneEffetCible": "voir description",
+    "duree": "jusqu’à 1 round/niveau ou instantanée (selon version)",
+    "jetSauvegarde": "Volonté, annule",
+    "resistanceMagie": "oui",
+    "fonctionnement": "Trois versions au choix : 1) Poussée subite : repousse en 6 m de rayon et projette des objets (1 projectile/2 niveaux en moyenne, jet d’attaque vs CA, dégâts contondants = niveau + 1d100). 2) Manœuvres de combat : attaque télékinésique ou protection contre projectiles (+50 % camouflage contre attaques à distance). 3) Force graduelle : déplace créature consentante ou objet (≤ 25 kg/niveau, max 750 kg) à 6 m/round, concentration requise.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "adaptation_planaire",
+    "nom": "Adaptation planaire",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 6,
+      "Prêtre": 4,
+      "Druide": 4,
+      "Ensorceleur": 5,
+      "Magicien": 5
+    },
+    "niveauInne": 4,
+    "ecole": "Transmutation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "contact",
+    "zoneEffetCible": "créature touchée et alliés dans un rayon de 5 m autour",
+    "duree": "1 heure/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Annule les effets environnementaux nuisibles et confère une immunité renforcée aux dégâts, préparant les créatures visées aux conditions du plan ou de la région.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "alteration_de_la_fortune",
+    "nom": "Altération de la fortune",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 3,
+      "Druide": 3,
+      "Prêtre": 3,
+      "Ensorceleur": 3,
+      "Magicien": 3
+    },
+    "niveauInne": 3,
+    "ecole": "Divination",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "zoneEffetCible": "créature touchée",
+    "duree": "1 tour/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Double la chance de la cible (ou la divise par deux si ennemi), octroie +2 à la CA d’esquive et aux jets de sauvegarde. Spécial – mode astrologue augmente encore ses effets.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "animation_d_objets",
+    "nom": "Animation d'objets",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 2,
+      "Prêtre": 2,
+      "Ensorceleur": 2,
+      "Magicien": 2,
+      "Artificier": 1
+    },
+    "niveauInne": 2,
+    "ecole": "Transmutation",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "zoneEffetCible": "objet ou meuble visé",
+    "duree": "1 minute/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Anime une arme, une armure, un casque, une cape, un bouclier ou un meuble (table, chaise, coffre, statue, ustensile) pour en faire un gardien. Ne fonctionne pas sur un objet tenu par autrui.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "arcanes_universelles",
+    "nom": "Arcanes Universelles",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 3,
+      "Ensorceleur": 3,
+      "Magicien": 3,
+      "Artificier": 3
+    },
+    "niveauInne": 3,
+    "ecole": "Universelle",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "zoneEffetCible": "voir description",
+    "duree": "10 minutes/niveau ou instantanée (voir description)",
+    "jetSauvegarde": "voir description",
+    "resistanceMagie": "oui (voir description)",
+    "fonctionnement": "Version améliorée de Prestidigitation : 1) Explosion d’énergie (1d6 magiques + 1d6 feu tous les 2 niveaux, max 10d6, réflexes pour moitié). 2) Réparation (2d10+1/niveau, max +15) d’objets/constructs. 3) Tours de passe-passe avancés (télékinésie légère, bonus de parade +1 CA, camouflage +4%/3 niveaux, chauffe, refroidit, illusions mineures visuelles/sonores, etc.). 4) Création d’objets non magiques (poids ≤ 1 kg/niveau, fragiles). Un seul effet actif à la fois.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "convocation_de_canon",
+    "nom": "Convocation de canon",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 5,
+      "Ensorceleur": 4,
+      "Magicien": 4,
+      "Artificier": 4
+    },
+    "niveauInne": 4,
+    "ecole": "Invocation (Création)",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "courte",
+    "zoneEffetCible": "zone visée",
+    "duree": "1 heure/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Crée un canon dont la qualité dépend du niveau du lanceur, de sa compétence en création d’armes et de ses dons artisanaux ou horlogers. Les munitions ne sont pas fournies ; le don Maniement des Armes à feu est recommandé. L’arme peut être utilisée par plusieurs personnes pour un usage efficace.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "detection_de_navire",
+    "nom": "Détection de navire",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 3,
+      "Prêtre": 4,
+      "Magicien": 3,
+      "Ensorceleur": 3
+    },
+    "niveauInne": 3,
+    "ecole": "Divination",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "spécial (voir description)",
+    "zoneEffetCible": "le lanceur de sorts",
+    "duree": "24 heures",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Détecte les navires dans un rayon de 750 m/niveau, visibles ou non. Navire non visible : présence détectée (hors le sien), avec don Pied Marin possibilité de connaître nombre, distance, direction, conservés tant que l’effet dure. Navire visible : avec Pied Marin, identifie type, vitesse, temps avant interception, allégeance et armement.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "fabrication",
+    "nom": "Fabrication",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Ensorceleur": 5,
+      "Magicien": 5,
+      "Artificier": 5
+    },
+    "niveauInne": 5,
+    "ecole": "Transmutation",
+    "composantes": ["verbale", "gestuelle", "matérielle"],
+    "portee": "courte",
+    "zoneEffetCible": "jusqu’à 0,3 m³/niveau (voir description)",
+    "duree": "instantanée et concentration (voir description)",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Convertit de la matière première en produit fini (pont, corde, vêtements, etc.). Ne fonctionne pas sur êtres vivants ou objets magiques. Qualité du résultat dépend de la matière et des compétences artisanales du lanceur. Avec un minerai, n'affecte que 30 dm³/niveau, transformation progressive de 0,3 m³/round (30 dm³ pour minerais).",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "localisation_de_creature",
+    "nom": "Localisation de créature",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 4,
+      "Prêtre": 5,
+      "Magicien": 4,
+      "Ensorceleur": 4
+    },
+    "niveauInne": 4,
+    "ecole": "Divination",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "longue",
+    "zoneEffetCible": "cercle de 120 m de rayon + 12 m/niveau, centré sur le lanceur",
+    "duree": "10 minutes/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Semblable à Localisation d'objet, mais pour une créature connue (espèce ou individu). Indique la direction après un tour complet. Bloqué par les cours d’eau, ne localise pas d’objets et peut être contrecarré par antidétection, double illusoire ou métamorphose.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "manoir_somptueux_de_mordenkainen",
+    "nom": "Manoir Somptueux de Mordenkainen",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Ensorceleur": 9,
+      "Magicien": 9
+    },
+    "niveauInne": 9,
+    "ecole": "Invocation",
+    "composantes": ["verbale", "gestuelle", "focalisateur"],
+    "portee": "courte",
+    "zoneEffetCible": "zone visée",
+    "duree": "2 heures/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Crée un espace extradimensionnel en forme de manoir richement décoré, avec serviteurs magiques invisibles et réserve de nourriture. Nécessite un focalisateur : une miniature du manoir de Mordenkainen.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "oeil_du_mage",
+    "nom": "Œil du mage",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Ensorceleur": 4,
+      "Magicien": 4
+    },
+    "niveauInne": 4,
+    "ecole": "Divination",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "illimitée",
+    "zoneEffetCible": "capteur magique",
+    "duree": "1 minute/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Crée un capteur magique mobile retransmettant au lanceur toutes les informations visuelles perçues. Se déplace à 9 m/round en avançant, 3 m/round pour examiner murs et plafond. Bloqué par obstacles solides, peut passer par un trou ≥ 2,5 cm de diamètre. Ne peut pas traverser les plans.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "prestidigitation",
+    "nom": "Prestidigitation",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 0,
+      "Ensorceleur": 0,
+      "Magicien": 0,
+      "Artificier": 0
+    },
+    "niveauInne": 0,
+    "ecole": "Universelle",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "3 mètres",
+    "zoneEffetCible": "voir description",
+    "duree": "1 heure",
+    "jetSauvegarde": "voir description",
+    "resistanceMagie": "non",
+    "fonctionnement": "Regroupe des tours mineurs sans grand effet : 1) Tours de passe-passe : manipulations légères (déplacer 500 g, colorier, nettoyer, chauffer, etc.), durée ≤ 1 h. 2) Création d’objets : petits objets non magiques (≤ 500 g), fragiles, disparaissent après 1 h.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "protection_contre_les_projectiles",
+    "nom": "Protection contre les projectiles",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Barde": 4,
+      "Ensorceleur": 4,
+      "Magicien": 4,
+      "Artificier": 4
+    },
+    "niveauInne": 4,
+    "ecole": "Abjuration",
+    "composantes": ["verbale", "gestuelle"],
+    "portee": "contact",
+    "zoneEffetCible": "créature touchée",
+    "duree": "1 tour/niveau",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Protège la cible contre la plupart des attaques à distance non magiques : camouflage +50 % contre ces attaques. Contre armes à feu, annule les dégâts si le jet de Réflexes réussit et réduit le DD de 10 pour toucher. 50 % de chances d’annuler d’autres projectiles (rochers, etc.).",
+    "utilisation": "Doit être lancé"
+  },
+  {
+    "id": "teleportation_selon_fenryl",
+    "nom": "Téléportation selon Fenryl",
+    "type": "Sort Ajouté",
+    "niveaux": {
+      "Magicien": 7,
+      "Ensorceleur": 7
+    },
+    "niveauInne": 7,
+    "ecole": "Invocation (Téléportation)",
+    "composantes": ["verbale", "focalisateur"],
+    "tempsIncantation": "1 round complet",
+    "portee": "spécial (voir description)",
+    "zoneEffetCible": "le lanceur et créatures consentantes qu’il touche",
+    "duree": "instantanée",
+    "jetSauvegarde": "aucun",
+    "resistanceMagie": "non",
+    "fonctionnement": "Permet de se téléporter en Ménolpée vers une destination connue, emmenant 1 créature/3 niveaux. Risques : déviation 20 % (arrivée imprécise), aléatoire 10 % (lieu aléatoire en Ménolpée), incident 10 % (20d10 dégâts). Chaque don d’invocation et le mode astrologue réduisent ces risques de 2 %.",
+    "utilisation": "Doit être lancé"
+  },
+  {
+  "id": "invisibilite_supreme",
+  "nom": "Invisibilité suprême",
+  "type": "Sort Modifié",
+  "niveaux": {
+    "Barde": 4,
+    "Magicien": 4,
+    "Ensorceleur": 4
+  },
+  "niveauInne": 4,
+  "ecole": "Illusion",
+  "composantes": ["verbale", "gestuelle"],
+  "portee": "contact",
+  "zoneEffetCible": "1 créature",
+  "duree": "1 tour/niveau",
+  "contresortSupplementaire": "Négation de l'invisibilité",
+  "jetSauvegarde": "inoffensif",
+  "resistanceMagie": "non",
+  "fonctionnement": "Le bénéficiaire devient invisible et ne peut être détecté normalement. Après une attaque ou après avoir lancé un sort, le bénéficiaire devient partiellement visible et peut donc être détecté par des adversaires mais il bénéficie d'un bonus de couverture de 20 %. Ce camouflage augmente de 5 % pour chaque don d'école Illusion possédé par le personnage.",
+  "utilisation": "Doit être lancé"
+}
+
+]
