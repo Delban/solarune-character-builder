@@ -1,0 +1,2364 @@
+[
+  {
+    "id": "arcane_archer",
+    "nom": "Arcane Archer",
+    "description": "Master of the elven warbands, the arcane archer is a warrior skilled in using magic to supplement his combat prowess.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 4,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "armor": [
+        "light",
+        "medium"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "heal",
+      "hide",
+      "listen",
+      "lore",
+      "move_silently",
+      "ride",
+      "spot"
+    ],
+    "primary_saves": [
+      "fortitude",
+      "reflex"
+    ],
+    "base_attack_bonus": "full",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {
+      "base_attack_bonus": 6,
+      "feats": [
+        "weapon_focus_longbow",
+        "weapon_focus_shortbow",
+        "point_blank_shot"
+      ],
+      "race": [
+        "elf",
+        "half_elf"
+      ],
+      "spellcasting": "arcane_level_1"
+    },
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "deflect_arrows",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "scribe_scroll",
+      "spell_focus",
+      "weapon_specialization"
+    ],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 1,
+        "saves": {
+          "fort": 2,
+          "ref": 2,
+          "will": 0
+        },
+        "features": [
+          "enchant_arrow"
+        ],
+        "hp_range": [
+          4,
+          8
+        ]
+      },
+      {
+        "level": 2,
+        "bab": 2,
+        "saves": {
+          "fort": 3,
+          "ref": 3,
+          "will": 0
+        },
+        "features": [
+          "imbue_arrow"
+        ],
+        "hp_range": [
+          8,
+          16
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artificier",
+    "nom": "Artificier",
+    "description": "Technomancien spécialisé dans la création d'objets magiques et la combinaison de magie et technologie. Maîtres de l'art de bricoler la magie.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "assassin_old",
+    "nom": "Assassin (Ancien)",
+    "description": "The assassin is a master of dealing quick, lethal blows. Assassins often function as spies, informants, killers for hire, or agents of vengeance.",
+    "type": "prestige",
+    "hit_die": "d6",
+    "skill_points": 4,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [
+        "light"
+      ],
+      "shields": false
+    },
+    "skills": [
+      "appraise",
+      "bluff",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "disable_trap",
+      "heal",
+      "hide",
+      "intimidate",
+      "listen",
+      "lore",
+      "move_silently",
+      "open_lock",
+      "pick_pocket",
+      "search",
+      "set_trap",
+      "spot",
+      "tumble",
+      "use_magic_device"
+    ],
+    "primary_saves": [
+      "reflex"
+    ],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": "evil",
+    "requirements": {
+      "alignment": "evil",
+      "skills": {
+        "hide": 8,
+        "move_silently": 8
+      }
+    },
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "deflect_arrows",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "scribe_scroll",
+      "spell_focus",
+      "weapon_specialization"
+    ],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 0,
+        "saves": {
+          "fort": 0,
+          "ref": 2,
+          "will": 0
+        },
+        "features": [
+          "use_poison",
+          "death_attack"
+        ],
+        "hp_range": [
+          3,
+          6
+        ]
+      },
+      {
+        "level": 2,
+        "bab": 1,
+        "saves": {
+          "fort": 0,
+          "ref": 3,
+          "will": 0
+        },
+        "features": [
+          "ghostly_visage",
+          "uncanny_dodge_1",
+          "poison_save"
+        ],
+        "hp_range": [
+          6,
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "id": "barbarian",
+    "nom": "Barbarian",
+    "description": "Barbarians are brave, even reckless warriors, and their great strength and heartiness makes them well suited for adventure. They tap into a powerful rage that makes them stronger, tougher, and better able to withstand attacks.",
+    "type": "base",
+    "hit_die": "d12",
+    "skill_points": 4,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "armor": [
+        "light",
+        "medium"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "discipline",
+      "heal",
+      "intimidate",
+      "listen",
+      "lore",
+      "parry",
+      "ride",
+      "taunt"
+    ],
+    "primary_saves": [
+      "fortitude"
+    ],
+    "base_attack_bonus": "full",
+    "spellcasting": null,
+    "alignment_restriction": "non_lawful",
+    "requirements": {},
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "scribe_scroll",
+      "spell_focus",
+      "weapon_specialization"
+    ],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 1,
+        "saves": {
+          "fort": 2,
+          "ref": 0,
+          "will": 0
+        },
+        "features": [
+          "barbarian_fast_movement",
+          "barbarian_rage_1"
+        ],
+        "hp_range": [
+          6,
+          12
+        ]
+      },
+      {
+        "level": 2,
+        "bab": 2,
+        "saves": {
+          "fort": 3,
+          "ref": 0,
+          "will": 0
+        },
+        "features": [
+          "uncanny_dodge_1"
+        ],
+        "hp_range": [
+          12,
+          24
+        ]
+      },
+      {
+        "level": 3,
+        "bab": 3,
+        "saves": {
+          "fort": 3,
+          "ref": 1,
+          "will": 1
+        },
+        "features": [],
+        "hp_range": [
+          18,
+          36
+        ]
+      },
+      {
+        "level": 4,
+        "bab": 4,
+        "saves": {
+          "fort": 4,
+          "ref": 1,
+          "will": 1
+        },
+        "features": [
+          "barbarian_rage_2"
+        ],
+        "hp_range": [
+          24,
+          48
+        ]
+      },
+      {
+        "level": 5,
+        "bab": 5,
+        "saves": {
+          "fort": 4,
+          "ref": 1,
+          "will": 1
+        },
+        "features": [
+          "uncanny_dodge_2"
+        ],
+        "hp_range": [
+          30,
+          60
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bard",
+    "nom": "Bard",
+    "description": "Bards often serve as negotiators, messengers, scouts, and spies. They love to accompany heroes to witness heroic deeds firsthand. A bard casts arcane spells without any advance preparation, much like a sorcerer.",
+    "type": "base",
+    "hit_die": "d6",
+    "skill_points": 4,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [
+        "light",
+        "medium"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "appraise",
+      "bluff",
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "discipline",
+      "heal",
+      "hide",
+      "listen",
+      "lore",
+      "move_silently",
+      "parry",
+      "perform",
+      "persuade",
+      "pick_pocket",
+      "spellcraft",
+      "taunt",
+      "tumble",
+      "use_magic_device"
+    ],
+    "primary_saves": [
+      "reflex",
+      "will"
+    ],
+    "base_attack_bonus": "medium",
+    "spellcasting": {
+      "type": "arcane",
+      "ability": "charisma",
+      "preparation": "spontaneous",
+      "spell_failure": true,
+      "cantrips": 4
+    },
+    "alignment_restriction": "non_lawful",
+    "requirements": {},
+    "unavailable_feats": [
+      "divine_might",
+      "divine_shield",
+      "extra_turning",
+      "weapon_specialization"
+    ],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 0,
+        "saves": {
+          "fort": 0,
+          "ref": 2,
+          "will": 2
+        },
+        "features": [
+          "bardic_knowledge",
+          "bard_song"
+        ],
+        "hp_range": [
+          3,
+          6
+        ],
+        "spells_per_day": {
+          "0": 2
+        },
+        "spells_known": {
+          "0": 4
+        }
+      },
+      {
+        "level": 2,
+        "bab": 1,
+        "saves": {
+          "fort": 0,
+          "ref": 3,
+          "will": 3
+        },
+        "features": [],
+        "hp_range": [
+          6,
+          12
+        ],
+        "spells_per_day": {
+          "0": 3,
+          "1": 0
+        },
+        "spells_known": {
+          "0": 5,
+          "1": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "base_class",
+    "nom": "Base Class",
+    "description": "",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "blackguard",
+    "nom": "Blackguard",
+    "description": "A blackguard epitomizes evil. They are nothing short of a mortal fiend, a black knight with the foulest sort of reputation. Many refer to blackguards as anti-paladins due to their completely evil nature. A blackguard is an evil villain of the first order, equivalent in power to the righteous paladin, but devoted to the powers of darkness.",
+    "type": "prestige",
+    "hit_die": "d10",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "armor": [
+        "light",
+        "medium",
+        "heavy"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "discipline",
+      "heal_skill|heal",
+      "intimidate",
+      "lore",
+      "parry",
+      "persuade",
+      "ride",
+      "taunt"
+    ],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {
+      "base_attack_bonus": 6,
+      "alignment": "",
+      "feats": []
+    },
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "deflect_arrows",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "scribe_scroll",
+      "spell_focus",
+      "weapon_specialization",
+      "these_general_feats_cannot_be_selected_when_taking_a_level_of_blackguard."
+    ],
+    "progression": []
+  },
+  {
+    "id": "chaman_spiritiste",
+    "nom": "Chaman Spiritiste",
+    "description": "Prêtre-druide spécialisé dans la communication avec les esprits et les forces surnaturelles.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 4,
+    "skill_modifier": "wis",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [
+        "light",
+        "medium"
+      ],
+      "shields": true,
+      "restrictions": [
+        "no_metal"
+      ]
+    },
+    "skills": [
+      "concentration",
+      "heal",
+      "listen",
+      "lore",
+      "spellcraft",
+      "spot"
+    ],
+    "primary_saves": [
+      "fortitude",
+      "will"
+    ],
+    "base_attack_bonus": "medium",
+    "spellcasting": {
+      "type": "divine",
+      "ability": "wisdom",
+      "preparation": "prepared",
+      "spell_failure": false
+    },
+    "alignment_restriction": "neutral",
+    "requirements": {
+      "skills": {
+        "persuade": 6,
+        "lore": 8
+      },
+      "feats": [
+        "meditation"
+      ]
+    },
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "champion_of_torm",
+    "nom": "Champion Of Torm",
+    "description": "Champions of Torm are mighty warriors who dedicate themselves to Torm's cause, defending holy ground, destroying enemies of the church, and slaying mythical beasts. Torm is the patron of paladins and an unswerving enemy of corruption and evil.",
+    "type": "prestige",
+    "hit_die": "d10",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "armor": [
+        "light",
+        "medium",
+        "heavy"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "discipline",
+      "heal_skill|heal",
+      "lore",
+      "parry",
+      "ride",
+      "spot"
+    ],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {
+      "base_attack_bonus": 7,
+      "alignment": "",
+      "feats": []
+    },
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "scribe_scroll",
+      "spell_focus",
+      "weapon_specialization",
+      "these_general_feats_cannot_be_selected_when_taking_a_level_of_champion_of_torm."
+    ],
+    "progression": []
+  },
+  {
+    "id": "chasseur_nocturne",
+    "nom": "Chasseur Nocturne",
+    "description": "Version remaniée de l'Assassin, plus accessible en roleplay. Chasseur polyvalent spécialisé dans l'élimination discrète.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "chevalier",
+    "nom": "Chevalier",
+    "description": "Classe de prestige Solarune incarnant l'idéal du guerrier noble et honorable, maître des armes et du code chevaleresque.",
+    "type": "prestige",
+    "hit_die": "d10",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "armor": [
+        "light",
+        "medium",
+        "heavy"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "discipline",
+      "heal",
+      "intimidate",
+      "persuade",
+      "ride"
+    ],
+    "primary_saves": [
+      "fortitude"
+    ],
+    "base_attack_bonus": "full",
+    "spellcasting": null,
+    "alignment_restriction": "lawful",
+    "requirements": {
+      "base_attack_bonus": 6,
+      "alignment": "lawful",
+      "feats": [
+        "weapon_focus"
+      ],
+      "skills": {
+        "discipline": 5,
+        "ride": 3
+      }
+    },
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "cleric",
+    "nom": "Cleric",
+    "description": "Clerics are masters of divine magic. Divine magic, as the name suggests, is the power of the gods, flowing from them to their worshippers. Clerics also have excellent combat capability and can take quite a beating.",
+    "type": "base",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [
+        "light",
+        "medium",
+        "heavy"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "heal",
+      "listen",
+      "lore",
+      "parry",
+      "persuade",
+      "spellcraft"
+    ],
+    "primary_saves": [
+      "fortitude",
+      "will"
+    ],
+    "base_attack_bonus": "medium",
+    "spellcasting": {
+      "type": "divine",
+      "ability": "wisdom",
+      "preparation": "prepared",
+      "spell_failure": false,
+      "domain_spells": true
+    },
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 0,
+        "saves": {
+          "fort": 2,
+          "ref": 0,
+          "will": 2
+        },
+        "features": [
+          "turn_undead",
+          "domains"
+        ],
+        "hp_range": [
+          4,
+          8
+        ],
+        "spells_per_day": {
+          "0": 3,
+          "1": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "danseur_de_guerre",
+    "nom": "Danseur de Guerre",
+    "description": "Combattant agile spécialisé dans le combat en équipe et les arts martiaux fluides.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "druid",
+    "nom": "Druid",
+    "description": "Druids cast divine spells much the same way clerics do, though most get their spells from the power of nature rather than from deities. Druids are proficient with light and medium armor but cannot wear or use metal armor and shields.",
+    "type": "base",
+    "hit_die": "d8",
+    "skill_points": 4,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [
+        "light",
+        "medium"
+      ],
+      "shields": true,
+      "restrictions": [
+        "no_metal"
+      ]
+    },
+    "skills": [
+      "animal_empathy",
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "heal",
+      "hide",
+      "listen",
+      "lore",
+      "move_silently",
+      "parry",
+      "search",
+      "spellcraft",
+      "spot"
+    ],
+    "primary_saves": [
+      "fortitude",
+      "will"
+    ],
+    "base_attack_bonus": "medium",
+    "spellcasting": {
+      "type": "divine",
+      "ability": "wisdom",
+      "preparation": "prepared",
+      "spell_failure": false
+    },
+    "alignment_restriction": "neutral",
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 0,
+        "saves": {
+          "fort": 2,
+          "ref": 0,
+          "will": 2
+        },
+        "features": [
+          "animal_companion",
+          "nature_sense"
+        ],
+        "hp_range": [
+          4,
+          8
+        ],
+        "spells_per_day": {
+          "0": 3,
+          "1": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "duelliste",
+    "nom": "Duelliste",
+    "description": "Classe de prestige Solarune spécialisée dans l'art du combat singulier et de l'escrime raffinée.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 4,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "armor": [
+        "light"
+      ],
+      "shields": false
+    },
+    "skills": [
+      "bluff",
+      "discipline",
+      "intimidate",
+      "parry",
+      "perform",
+      "tumble"
+    ],
+    "primary_saves": [
+      "reflex"
+    ],
+    "base_attack_bonus": "full",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {
+      "base_attack_bonus": 6,
+      "feats": [
+        "dodge",
+        "mobility"
+      ],
+      "skills": {
+        "parry": 5,
+        "tumble": 5
+      }
+    },
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "dwarven_defender",
+    "nom": "Dwarven Defender",
+    "description": "The defender is a sponsored champion of dwarven cause, a dwarven aristocrat, a dwarven deity or the dwarven way of life. As the name might imply, this character is a skilled combatant trained in the arts of defense. A line of dwarven defenders is a far better defense than a 10-foot-thick wall of stones, and much more dangerous.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": "any lawful",
+    "requirements": {
+      "base_attack_bonus": 7,
+      "alignment": "any lawful",
+      "feats": [
+        "dodge",
+        "toughness"
+      ]
+    },
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "scribe_scroll",
+      "spell_focus",
+      "weapon_specialization",
+      "these_general_feats_cannot_be_selected_when_taking_a_level_of_dwarven_defender."
+    ],
+    "progression": []
+  },
+  {
+    "id": "eclaireur",
+    "nom": "Eclaireur",
+    "description": "",
+    "type": "base",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "eclaireur_menestrel",
+    "nom": "Éclaireur Ménestrel",
+    "description": "Version remaniée du Harper Scout, adaptée à l'univers Solarune. Espion et éclaireur polyvalent combinant talents de reconnaissance et d'art bardique.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 6,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [
+        "light",
+        "medium"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "bluff",
+      "discipline",
+      "hide",
+      "listen",
+      "lore",
+      "move_silently",
+      "perform",
+      "persuade",
+      "search",
+      "spot"
+    ],
+    "primary_saves": [
+      "reflex",
+      "will"
+    ],
+    "base_attack_bonus": "medium",
+    "spellcasting": {
+      "type": "arcane",
+      "ability": "charisma",
+      "preparation": "spontaneous",
+      "spell_failure": true
+    },
+    "alignment_restriction": "non_evil",
+    "requirements": {
+      "alignment": "non_evil",
+      "skills": {
+        "spellcraft": 4,
+        "search": 4,
+        "persuade": 8,
+        "lore": 6
+      },
+      "feats": [
+        "alertness"
+      ]
+    },
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "fighter",
+    "nom": "Fighter",
+    "description": "Fighters can be many things, from soldiers to criminal enforcers. Some see adventure as a way to get rich, while others use their skills to protect the innocent. Fighters have the best all-around fighting capabilities of all classes.",
+    "type": "base",
+    "hit_die": "d10",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "armor": [
+        "light",
+        "medium",
+        "heavy"
+      ],
+      "shields": true,
+      "tower_shields": true
+    },
+    "skills": [
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "discipline",
+      "heal",
+      "intimidate",
+      "listen",
+      "lore",
+      "parry",
+      "ride",
+      "spot",
+      "taunt"
+    ],
+    "primary_saves": [
+      "fortitude"
+    ],
+    "base_attack_bonus": "full",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 1,
+        "saves": {
+          "fort": 2,
+          "ref": 0,
+          "will": 0
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          5,
+          10
+        ]
+      },
+      {
+        "level": 2,
+        "bab": 2,
+        "saves": {
+          "fort": 3,
+          "ref": 0,
+          "will": 0
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          10,
+          20
+        ]
+      },
+      {
+        "level": 3,
+        "bab": 3,
+        "saves": {
+          "fort": 3,
+          "ref": 1,
+          "will": 1
+        },
+        "features": [],
+        "hp_range": [
+          15,
+          30
+        ]
+      },
+      {
+        "level": 4,
+        "bab": 4,
+        "saves": {
+          "fort": 4,
+          "ref": 1,
+          "will": 1
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          20,
+          40
+        ]
+      },
+      {
+        "level": 5,
+        "bab": 5,
+        "saves": {
+          "fort": 4,
+          "ref": 1,
+          "will": 1
+        },
+        "features": [],
+        "hp_range": [
+          25,
+          50
+        ]
+      },
+      {
+        "level": 6,
+        "bab": 6,
+        "saves": {
+          "fort": 5,
+          "ref": 2,
+          "will": 2
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          30,
+          60
+        ]
+      },
+      {
+        "level": 7,
+        "bab": 7,
+        "saves": {
+          "fort": 5,
+          "ref": 2,
+          "will": 2
+        },
+        "features": [],
+        "hp_range": [
+          35,
+          70
+        ]
+      },
+      {
+        "level": 8,
+        "bab": 8,
+        "saves": {
+          "fort": 6,
+          "ref": 2,
+          "will": 2
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          40,
+          80
+        ]
+      },
+      {
+        "level": 9,
+        "bab": 9,
+        "saves": {
+          "fort": 6,
+          "ref": 3,
+          "will": 3
+        },
+        "features": [],
+        "hp_range": [
+          45,
+          90
+        ]
+      },
+      {
+        "level": 10,
+        "bab": 10,
+        "saves": {
+          "fort": 7,
+          "ref": 3,
+          "will": 3
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          50,
+          100
+        ]
+      },
+      {
+        "level": 11,
+        "bab": 11,
+        "saves": {
+          "fort": 7,
+          "ref": 3,
+          "will": 3
+        },
+        "features": [],
+        "hp_range": [
+          55,
+          110
+        ]
+      },
+      {
+        "level": 12,
+        "bab": 12,
+        "saves": {
+          "fort": 8,
+          "ref": 4,
+          "will": 4
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          60,
+          120
+        ]
+      },
+      {
+        "level": 13,
+        "bab": 13,
+        "saves": {
+          "fort": 8,
+          "ref": 4,
+          "will": 4
+        },
+        "features": [],
+        "hp_range": [
+          65,
+          130
+        ]
+      },
+      {
+        "level": 14,
+        "bab": 14,
+        "saves": {
+          "fort": 9,
+          "ref": 4,
+          "will": 4
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          70,
+          140
+        ]
+      },
+      {
+        "level": 15,
+        "bab": 15,
+        "saves": {
+          "fort": 9,
+          "ref": 5,
+          "will": 5
+        },
+        "features": [],
+        "hp_range": [
+          75,
+          150
+        ]
+      },
+      {
+        "level": 16,
+        "bab": 16,
+        "saves": {
+          "fort": 10,
+          "ref": 5,
+          "will": 5
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          80,
+          160
+        ]
+      },
+      {
+        "level": 17,
+        "bab": 17,
+        "saves": {
+          "fort": 10,
+          "ref": 5,
+          "will": 5
+        },
+        "features": [],
+        "hp_range": [
+          85,
+          170
+        ]
+      },
+      {
+        "level": 18,
+        "bab": 18,
+        "saves": {
+          "fort": 11,
+          "ref": 6,
+          "will": 6
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          90,
+          180
+        ]
+      },
+      {
+        "level": 19,
+        "bab": 19,
+        "saves": {
+          "fort": 11,
+          "ref": 6,
+          "will": 6
+        },
+        "features": [],
+        "hp_range": [
+          95,
+          190
+        ]
+      },
+      {
+        "level": 20,
+        "bab": 20,
+        "saves": {
+          "fort": 12,
+          "ref": 6,
+          "will": 6
+        },
+        "features": [
+          "bonus_feat"
+        ],
+        "hp_range": [
+          100,
+          200
+        ]
+      }
+    ]
+  },
+  {
+    "id": "harper_scout_old",
+    "nom": "Harper Scout (Ancien)",
+    "description": "The Harpers are a secret society. Members are dedicated to holding back evil, preserving knowledge and maintaining the balance between civilization and the wild. The Harper scout performs many duties including espionage, stealth and reporting information. Many Harpers are bards, but by no means all. Ranger, rogue, sorcerer, and wizard are common vocations for Harpers, as these classes tend to have versatility and mobility. All have some skill at manipulating others, a resistance to outside mental influences, acute abilities of perception, and a talent for solving problems.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": "any non-evil",
+    "requirements": {
+      "alignment": "any non-evil",
+      "skills": {
+        "discipline": 4,
+        "lore": 6,
+        "persuade": 8,
+        "search": 4
+      },
+      "feats": [
+        "alertness",
+        "iron_will"
+      ]
+    },
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "magelame",
+    "nom": "Magelame",
+    "description": "Guerrier-mage expert dans la combinaison d'arts martiaux et de magie profane.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "metamorphe",
+    "nom": "Métamorphe",
+    "description": "Classe de prestige Solarune spécialisée dans la transformation et la métamorphose, version remaniée du Shifter original.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 4,
+    "skill_modifier": "wis",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [
+        "light",
+        "medium"
+      ],
+      "shields": true,
+      "restrictions": [
+        "no_metal"
+      ]
+    },
+    "skills": [
+      "animal_empathy",
+      "concentration",
+      "heal",
+      "hide",
+      "listen",
+      "lore",
+      "spot"
+    ],
+    "primary_saves": [
+      "fortitude",
+      "will"
+    ],
+    "base_attack_bonus": "medium",
+    "spellcasting": {
+      "type": "divine",
+      "ability": "wisdom",
+      "preparation": "prepared",
+      "spell_failure": false
+    },
+    "alignment_restriction": "non_lawful",
+    "requirements": {
+      "spellcasting": "any_level_3",
+      "alignment": "non_lawful",
+      "ability_scores": {
+        "wisdom": 13
+      },
+      "feats": [
+        "alertness",
+        "iron_will"
+      ],
+      "special": "wild_shape_or_polymorph_spell_known"
+    },
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "monk",
+    "nom": "Monk",
+    "description": "Monks are warriors who learn to harness the power that lies within themselves. Monks make careful study of a magical energy that most monastic orders call ki. Monks are versatile warriors skilled at fighting without weapons or armor.",
+    "type": "base",
+    "hit_die": "d8",
+    "skill_points": 4,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "kama",
+        "nunchaku",
+        "quarterstaff",
+        "shuriken",
+        "siangham"
+      ],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "discipline",
+      "heal",
+      "hide",
+      "listen",
+      "lore",
+      "move_silently",
+      "parry",
+      "spot",
+      "tumble"
+    ],
+    "primary_saves": [
+      "fortitude",
+      "reflex",
+      "will"
+    ],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": "lawful",
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 0,
+        "saves": {
+          "fort": 2,
+          "ref": 2,
+          "will": 2
+        },
+        "features": [
+          "flurry_of_blows",
+          "unarmed_strike",
+          "bonus_feat"
+        ],
+        "hp_range": [
+          4,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "id": "occultiste",
+    "nom": "Occultiste",
+    "description": "Lanceur de sorts spécialisé dans les arts occultes et les connaissances interdites, maître des mystères cachés.",
+    "type": "prestige",
+    "hit_die": "d6",
+    "skill_points": 4,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [
+      "concentration",
+      "craft_alchemy",
+      "heal",
+      "hide",
+      "listen",
+      "lore",
+      "search",
+      "spellcraft",
+      "spot"
+    ],
+    "primary_saves": [
+      "will"
+    ],
+    "base_attack_bonus": "low",
+    "spellcasting": {
+      "type": "arcane",
+      "ability": "intelligence",
+      "preparation": "prepared",
+      "spell_failure": true,
+      "school_specialization": true
+    },
+    "alignment_restriction": "non_good",
+    "requirements": {
+      "spellcasting": "arcane_level_3",
+      "alignment": "non_good",
+      "skills": {
+        "lore": 10,
+        "spellcraft": 8
+      },
+      "feats": [
+        "spell_focus_necromancy"
+      ]
+    },
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "paladin",
+    "nom": "Paladin",
+    "description": "Paladins take their adventures seriously, and have a penchant for referring to them as quests. Even a mundane mission is, in the heart of the paladin, a personal test - an opportunity to demonstrate bravery, to learn justice, and to serve the greater good.",
+    "type": "base",
+    "hit_die": "d10",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "armor": [
+        "light",
+        "medium",
+        "heavy"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "discipline",
+      "heal",
+      "listen",
+      "lore",
+      "parry",
+      "persuade",
+      "ride",
+      "spellcraft"
+    ],
+    "primary_saves": [
+      "fortitude"
+    ],
+    "base_attack_bonus": "full",
+    "spellcasting": {
+      "type": "divine",
+      "ability": "wisdom",
+      "preparation": "prepared",
+      "spell_failure": false,
+      "start_level": 4
+    },
+    "alignment_restriction": "lawful_good",
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 1,
+        "saves": {
+          "fort": 2,
+          "ref": 0,
+          "will": 0
+        },
+        "features": [
+          "aura_of_good",
+          "detect_evil",
+          "smite_evil"
+        ],
+        "hp_range": [
+          5,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pale_master",
+    "nom": "Pale Master",
+    "description": "Necromancy is usually a poor choice for arcane spellcasters. Those who really want to master the deathless arts almost always pursue divine means. However, an alternative exists for those who desire power over undead, without losing too much of their arcane power. Enter the pale master, who draws on a font of special lore that provides a macabre power all its own.",
+    "type": "prestige",
+    "hit_die": "d6",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "heal_skill|heal",
+      "hide",
+      "listen",
+      "lore",
+      "move_silently",
+      "persuade",
+      "spellcraft"
+    ],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {
+      "alignment": ""
+    },
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "scribe_scroll",
+      "spell_focus",
+      "two-weapon_fighting",
+      "weapon_proficiency_(exotic)",
+      "weapon_proficiency_(martial)",
+      "weapon_proficiency_(simple)",
+      "weapon_specialization",
+      "these_general_feats_cannot_be_selected_when_taking_a_level_of_pale_master."
+    ],
+    "progression": []
+  },
+  {
+    "id": "prestige_class",
+    "nom": "Prestige Class",
+    "description": "",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "professionnel",
+    "nom": "Professionnel",
+    "description": "",
+    "type": "base",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "purple_dragon_knight_old",
+    "nom": "Purple Dragon Knight (Ancien)",
+    "description": "The famous purple dragons of Cormyr are regarded across Faerûn as exemplars of disciplined, skilled, loyal soldiers. Their reputation is deserved partly because of the heroic actions of their leaders, the purple dragon knights. Purple dragon knights develop uncanny skills relating to coordinating and leading soldiers. Most are fighters, rangers or paladins, but a few bards, clerics, and rogues have been known to become purple dragon knights. Sorcerers and wizards tend to join the war wizards, Cormyr's elite brigade of fighting spellcasters, while barbarians are too undisciplined, and druids too \"uncivilized\" in Cormyr to enter this career.",
+    "type": "prestige",
+    "hit_die": "d10",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [
+      "intimidate_1_rank",
+      "listen_2_ranks",
+      "persuade_1_rank",
+      "ride_2_ranks",
+      "spot_2_ranks",
+      "==level_progression==",
+      "{|_class=\"compacttable\"_style=\"text-align:center;_margin-top:1em;_margin-left:0em\"",
+      "!rowspan=2|level",
+      "!rowspan=2|bab",
+      "!colspan=3|saves",
+      "!rowspan=2|feats",
+      "!rowspan=2|hp_range",
+      "|-",
+      "!fort",
+      "!ref",
+      "!will",
+      "|-",
+      "|1_||+1_||+2_||+0_||+0_||align=left|rallying_cry",
+      "heroic_shield_||5-10",
+      "|-",
+      "|2_||+2_||+3_||+0_||+0_||align=left|inspire_courage_1/day_||10-20",
+      "|-",
+      "|3_||+3_||+3_||+1_||+1_||align=left|fear_feat|fear_||15-30",
+      "|-",
+      "|4_||+4_||+4_||+1_||+1_||align=left|inspire_courage_2/day",
+      "oath_of_wrath_||20-40",
+      "|-",
+      "|5_||+5_||+4_||+1_||+1_||align=left|final_stand_||25-50",
+      "|}",
+      "==epic_purple_dragon_knight==",
+      "purple_dragon_knights_are_only_able_to_attain_five_levels_and_may_never_become_\"epic\"_in_the_purple_dragon_knight_class._they_can",
+      "of_course",
+      "gain_epic_levels_in_their_other_classes."
+    ],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {
+      "base_attack_bonus": 4,
+      "alignment": "",
+      "feats": []
+    },
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "scribe_scroll",
+      "spell_focus",
+      "weapon_specialization",
+      "these_general_feats_cannot_be_selected_when_taking_a_level_of_purple_dragon_knight."
+    ],
+    "progression": []
+  },
+  {
+    "id": "ranger",
+    "nom": "Ranger",
+    "description": "Rangers are skilled stalkers and hunters who make their home in the wilderness. Their martial skill is nearly the equal of the fighter, but they lack the latter's dedication to the craft of fighting. Instead, the ranger focuses his skills and training on a specific enemy - a type of creature he bears a vengeful grudge against and hunts above all others.",
+    "type": "base",
+    "hit_die": "d10",
+    "skill_points": 4,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "martial"
+      ],
+      "armor": [
+        "light",
+        "medium"
+      ],
+      "shields": true
+    },
+    "skills": [
+      "animal_empathy",
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "discipline",
+      "heal",
+      "hide",
+      "listen",
+      "lore",
+      "move_silently",
+      "parry",
+      "search",
+      "set_trap",
+      "spot"
+    ],
+    "primary_saves": [
+      "fortitude",
+      "reflex"
+    ],
+    "base_attack_bonus": "full",
+    "spellcasting": {
+      "type": "divine",
+      "ability": "wisdom",
+      "preparation": "prepared",
+      "spell_failure": false,
+      "start_level": 4
+    },
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 1,
+        "saves": {
+          "fort": 2,
+          "ref": 2,
+          "will": 0
+        },
+        "features": [
+          "favored_enemy",
+          "track",
+          "dual_wield"
+        ],
+        "hp_range": [
+          5,
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "id": "red_dragon_disciple",
+    "nom": "Red Dragon Disciple",
+    "description": "",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "discipline",
+      "heal_skill|heal",
+      "listen",
+      "lore",
+      "parry",
+      "persuade",
+      "search",
+      "spellcraft",
+      "spot"
+    ],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": []
+  },
+  {
+    "id": "rogue",
+    "nom": "Rogue",
+    "description": "Rogues have little in common with each other. While some - maybe even the majority - are stealthy thieves, many serve as scouts, spies, investigators, diplomats, and simple thugs. What they all share is a versatility, adaptability, and resourcefulness that makes them valuable members of any adventuring party.",
+    "type": "base",
+    "hit_die": "d6",
+    "skill_points": 8,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple",
+        "hand_crossbow",
+        "rapier",
+        "shortbow",
+        "short_sword"
+      ],
+      "armor": [
+        "light"
+      ],
+      "shields": false
+    },
+    "skills": [
+      "appraise",
+      "bluff",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "disable_trap",
+      "discipline",
+      "heal",
+      "hide",
+      "intimidate",
+      "listen",
+      "lore",
+      "move_silently",
+      "open_lock",
+      "parry",
+      "perform",
+      "persuade",
+      "pick_pocket",
+      "search",
+      "set_trap",
+      "spot",
+      "taunt",
+      "tumble",
+      "use_magic_device"
+    ],
+    "primary_saves": [
+      "reflex"
+    ],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 0,
+        "saves": {
+          "fort": 0,
+          "ref": 2,
+          "will": 0
+        },
+        "features": [
+          "sneak_attack_1d6"
+        ],
+        "hp_range": [
+          3,
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shadowdancer",
+    "nom": "Shadowdancer",
+    "description": "Shadowdancers operate in the border between light and darkness. These nimble artists of deception are never completely trusted but always induce wonder when met. Despite their link with shadows and trickery, shadowdancers are as often good as evil. They may use their incredible abilities as they wish. Shadowdancers often work in troupes, never staying in one place too long. Some use their abilities to entertain. Others operate as thieves, using their abilities to infiltrate past defenses and dupe others. All shadowdancer troupes maintain an aura of mystery among the populace, who never know whether to think well or ill of them.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [
+        "light"
+      ],
+      "shields": false
+    },
+    "skills": [
+      "heal_skill|heal",
+      "hide",
+      "listen",
+      "lore",
+      "move_silently",
+      "persuade",
+      "pick_pocket",
+      "search",
+      "spot",
+      "tumble"
+    ],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {
+      "feats": []
+    },
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "scribe_scroll",
+      "spell_focus",
+      "weapon_specialization",
+      "these_general_feats_cannot_be_selected_when_taking_a_level_of_shadowdancer."
+    ],
+    "progression": []
+  },
+  {
+    "id": "shifter_old",
+    "nom": "Shifter (Ancien)",
+    "description": "A shifter has no form they call their own. Instead, they clothe themselves in whatever shape is most expedient at the time. While others base their identities largely on their external forms, the shifter actually comes closer to their true self through all of their transformations. Of necessity, their sense of self is based not on their outward form, but on their soul, which is truly the only constant about them. It is the inner strength of that soul that enables them to take on any shape and remain themselves within.",
+    "type": "prestige",
+    "hit_die": "d8",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [
+      "animal_empathy",
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "heal_skill|heal",
+      "hide",
+      "listen",
+      "lore",
+      "persuade",
+      "spot"
+    ],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {
+      "feats": [
+        "alertness",
+        "wild_shape"
+      ]
+    },
+    "unavailable_feats": [
+      "curse_song",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "spell_focus",
+      "two-weapon_fighting",
+      "weapon_proficiency_(exotic)",
+      "weapon_proficiency_(martial)",
+      "weapon_proficiency_(simple)",
+      "weapon_specialization",
+      "these_general_feats_cannot_be_selected_when_taking_a_level_of_shifter."
+    ],
+    "progression": []
+  },
+  {
+    "id": "sorcerer",
+    "nom": "Sorcerer",
+    "description": "Sorcerers create magic the way poets create poems, with inborn talent honed by practice. They have no books, no mentors, no theories - just raw power that they direct at will. Some sorcerers claim that the blood of dragons courses through their veins.",
+    "type": "base",
+    "hit_die": "d4",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [
+      "alchemy",
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "heal",
+      "lore",
+      "profession",
+      "spellcraft"
+    ],
+    "primary_saves": [
+      "will"
+    ],
+    "base_attack_bonus": "low",
+    "spellcasting": {
+      "type": "arcane",
+      "ability": "charisma",
+      "preparation": "spontaneous",
+      "spell_failure": true,
+      "cantrips": 4
+    },
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 0,
+        "saves": {
+          "fort": 0,
+          "ref": 0,
+          "will": 2
+        },
+        "features": [
+          "summon_familiar"
+        ],
+        "hp_range": [
+          2,
+          4
+        ],
+        "spells_per_day": {
+          "0": 5,
+          "1": 3
+        },
+        "spells_known": {
+          "0": 4,
+          "1": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "weapon_master",
+    "nom": "Weapon Master",
+    "description": "For the weapon master, perfection is found in the mastery of a single melee weapon. A weapon master seeks to unite this weapon of choice with his body, to make them one, and to use the weapon as naturally and without thought as any other limb.",
+    "type": "prestige",
+    "hit_die": "d10",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [
+      "discipline",
+      "heal_skill|heal",
+      "intimidate",
+      "listen",
+      "lore",
+      "spot"
+    ],
+    "primary_saves": [],
+    "base_attack_bonus": "medium",
+    "spellcasting": null,
+    "alignment_restriction": null,
+    "requirements": {
+      "base_attack_bonus": 5,
+      "skills": {
+        "intimidate": 4
+      },
+      "feats": [
+        "arme_de_predilection",
+        "esquive",
+        "souplesse_du_serpent",
+        "expertise_du_combat",
+        "attaque_eclair",
+        "attaque_en_rotation"
+      ]
+    },
+    "unavailable_feats": [
+      "brew_potion",
+      "craft_wand",
+      "curse_song",
+      "divine_might",
+      "divine_shield",
+      "extra_music",
+      "extra_turning",
+      "lingering_song",
+      "quicken_spell",
+      "scribe_scroll",
+      "spell_focus",
+      "weapon_specialization",
+      "these_general_feats_cannot_be_selected_when_taking_a_level_of_weapon_master."
+    ],
+    "progression": []
+  },
+  {
+    "id": "wizard",
+    "nom": "Wizard",
+    "description": "Wizards are arcane spellcasters who depend on intensive study to create their magic. They are the most versatile of all spellcasters, but also the most vulnerable. They wear no armor and have poor combat skills. However, their access to the arcane allows them to use more magic than any other character class.",
+    "type": "base",
+    "hit_die": "d4",
+    "skill_points": 2,
+    "skill_modifier": "int",
+    "proficiencies": {
+      "weapons": [
+        "simple"
+      ],
+      "armor": [],
+      "shields": false
+    },
+    "skills": [
+      "alchemy",
+      "concentration",
+      "craft_armor",
+      "craft_trap",
+      "craft_weapon",
+      "heal",
+      "listen",
+      "lore",
+      "search",
+      "spellcraft",
+      "spot"
+    ],
+    "primary_saves": [
+      "will"
+    ],
+    "base_attack_bonus": "low",
+    "spellcasting": {
+      "type": "arcane",
+      "ability": "intelligence",
+      "preparation": "prepared",
+      "spell_failure": true,
+      "school_specialization": true
+    },
+    "alignment_restriction": null,
+    "requirements": {},
+    "unavailable_feats": [],
+    "progression": [
+      {
+        "level": 1,
+        "bab": 0,
+        "saves": {
+          "fort": 0,
+          "ref": 0,
+          "will": 2
+        },
+        "features": [
+          "summon_familiar",
+          "scribe_scroll"
+        ],
+        "hp_range": [
+          2,
+          4
+        ],
+        "spells_per_day": {
+          "0": 3,
+          "1": 1
+        }
+      }
+    ]
+  }
+]

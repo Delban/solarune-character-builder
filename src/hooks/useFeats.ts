@@ -1,0 +1,290 @@
+// src/hooks/useFeats.ts
+import { useMemo } from 'react';
+import type { Character } from '../models/Character';
+import type { Don } from '../models/Don';
+import { getFinalAttributes, calculateBaseAttackBonus } from '../utils/characterCalculations';
+import { getRacialBonusFeatSlots } from '../utils/racialFeats';
+import { allClasses } from '../data';
+
+export interface FeatSlot {
+  level: number;
+  type: 'general' | 'bonus' | 'class';
+  description: string;
+  source?: string; // Pour identifier la source du don (classe, etc.)
+  restrictions?: string[]; // Tags de dons requis pour les dons bonus
+  id: string; // Identifiant unique pour différencier les slots du même niveau
+}
+
+export function useFeats(character: Character | null, availableFeats: Don[]) {
+  // Calculer les emplacements de dons disponibles
+  const featSlots = useMemo((): FeatSlot[] => {
+    if (!character) return [];
+    
+    const slots: FeatSlot[] = [];
+    
+    // Dons généraux selon la règle NWN : 1, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30
+    const generalFeatLevels = [1, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
+    generalFeatLevels.forEach(level => {
+      if (level <= character.niveauTotal) {
+        slots.push({
+          level,
+          type: 'general',
+          description: `Don général (niveau ${level})`,
+          id: `general-${level}`
+        });
+      }
+    });
+    
+    // Dons bonus selon la progression des classes dans classesNWN.json
+    character.niveaux.forEach((levelData, globalLevelIndex) => {
+      const globalLevel = globalLevelIndex + 1; // Les niveaux sont 1-indexés
+      const classData = allClasses.find(c => c.id === levelData.classe);
+      
+      console.log(`🐛 DEBUG useFeats - Niveau ${globalLevel}: classe="${levelData.classe}", classData found:`, !!classData);
+      
+      if (classData && classData.progression) {
+        // Calculer le niveau dans cette classe spécifique
+        const classLevelsBeforeThis = character.niveaux
+          .slice(0, globalLevelIndex)
+          .filter(level => level.classe === levelData.classe).length;
+        const classLevel = classLevelsBeforeThis + 1;
+        
+        // Chercher les features pour ce niveau de classe
+        const progressionLevel = classData.progression.find(p => p.level === classLevel);
+        
+        console.log(`🐛 DEBUG useFeats - ${classData.nom} niveau ${classLevel}, progression:`, progressionLevel);
+        
+        if (progressionLevel && progressionLevel.features && progressionLevel.features.includes('bonus_feat')) {
+          console.log(`✅ Adding bonus feat for ${classData.nom} level ${classLevel} (global level ${globalLevel})`);
+          console.log(`🔧 levelData.classe: "${levelData.classe}"`);
+          
+          const restrictions = levelData.classe === 'fighter' ? ['fighter', 'guerrier'] : undefined;
+          console.log(`🔧 Computed restrictions:`, restrictions);
+          
+          slots.push({
+            level: globalLevel,
+            type: 'bonus',
+            description: `Don bonus de ${classData.nom} (niveau ${classLevel})`,
+            source: levelData.classe,
+            restrictions: restrictions,
+            id: `bonus-${levelData.classe}-${globalLevel}`
+          });
+        }
+      }
+    });
+    
+    // Ajouter les dons raciaux (slot supplémentaire pour humains)
+    const racialFeatSlots = getRacialBonusFeatSlots(character);
+    racialFeatSlots.forEach(slot => {
+      slots.push({
+        level: slot.level,
+        type: slot.type,
+        description: slot.source === 'racial_human' 
+          ? `Don général bonus (Humain niveau ${slot.level})`
+          : `Don racial (${slot.source})`,
+        source: slot.source,
+        id: `racial-${slot.source}-${slot.level}`
+      });
+    });
+    
+    return slots.sort((a, b) => {
+      // Trier par niveau, puis par type (general avant bonus avant class)
+      if (a.level !== b.level) {
+        return a.level - b.level;
+      }
+      // Si même niveau, order: general, bonus, class
+      const typeOrder = { general: 0, bonus: 1, class: 2 };
+      return typeOrder[a.type] - typeOrder[b.type];
+    });
+  }, [character]);
+  
+  // Dons actuellement sélectionnés
+  const selectedFeats = useMemo((): string[] => {
+    if (!character) return [];
+    
+    const selected: string[] = [];
+    character.niveaux.forEach(level => {
+      selected.push(...level.donsChoisis);
+    });
+    return selected;
+  }, [character]);
+
+  // Calculer les niveaux par classe
+  const getClassLevels = useMemo(() => {
+    if (!character) return {};
+    
+    const classLevels: { [classId: string]: number } = {};
+    
+    character.niveaux.forEach(niveau => {
+      classLevels[niveau.classe] = (classLevels[niveau.classe] || 0) + 1;
+    });
+    
+    return classLevels;
+  }, [character]);
+
+  // Obtenir tous les dons du personnage (choisis + automatiques)
+  const getAllCharacterFeats = useMemo(() => {
+    if (!character) return [];
+    
+    const allFeats = new Set<string>();
+    
+    character.niveaux.forEach(niveau => {
+      // Dons choisis
+      niveau.donsChoisis.forEach(feat => allFeats.add(feat));
+      // Dons automatiques
+      if (niveau.donsAutomatiques) {
+        niveau.donsAutomatiques.forEach(feat => allFeats.add(feat));
+      }
+    });
+    
+    return Array.from(allFeats);
+  }, [character]);
+  
+  // Dons disponibles (non encore sélectionnés)
+  const availableUnselectedFeats = useMemo(() => {
+    const allCharacterFeats = getAllCharacterFeats;
+    return availableFeats.filter(feat => !allCharacterFeats.includes(feat.id));
+  }, [availableFeats, getAllCharacterFeats]);
+  
+  // Vérifier si un don peut être sélectionné
+  const canSelectFeat = useMemo(() => {
+    return (feat: Don): { canSelect: boolean; reasons: string[] } => {
+      if (!character) return { canSelect: false, reasons: ['Aucun personnage sélectionné'] };
+      
+      const reasons: string[] = [];
+      const finalAttributes = getFinalAttributes(character);
+      const baseAttackBonus = calculateBaseAttackBonus(character);
+      const allCharacterFeats = getAllCharacterFeats;
+      
+      // Vérifier si déjà sélectionné (dans les dons choisis OU automatiques)
+      if (allCharacterFeats.includes(feat.id)) {
+        reasons.push('Don déjà possédé');
+      }
+      
+      // Vérifier les prérequis d'attributs et de bonus d'attaque de base
+      if (feat.conditionsCaractéristiques) {
+        for (const [attr, required] of Object.entries(feat.conditionsCaractéristiques)) {
+          if (attr === 'bonus_base_attaque') {
+            if (baseAttackBonus < required) {
+              reasons.push(`Bonus d'attaque de base ${required} requis (actuel: ${baseAttackBonus})`);
+            }
+          } else {
+            const attrKey = attr as keyof typeof finalAttributes;
+            if (finalAttributes[attrKey] < required) {
+              reasons.push(`${attr.charAt(0).toUpperCase() + attr.slice(1)} ${required} requis (actuel: ${finalAttributes[attrKey]})`);
+            }
+          }
+        }
+      }
+      
+      // Vérifier les prérequis de dons
+      if (feat.conditionsId && feat.conditionsId.length > 0) {
+        for (const prereqId of feat.conditionsId) {
+          if (!allCharacterFeats.includes(prereqId)) {
+            const prereqFeat = availableFeats.find(f => f.id === prereqId);
+            const prereqName = prereqFeat ? prereqFeat.nom : prereqId;
+            reasons.push(`Don prérequis manquant: ${prereqName}`);
+          }
+        }
+      }
+      
+      // Vérifications spéciales pour certains dons
+      if (feat.id === 'specialisation_martiale') {
+        const fighterLevels = getClassLevels['fighter'] || 0;
+        if (fighterLevels < 4) {
+          reasons.push('Spécialisation martiale nécessite 4 niveaux de Fighter minimum');
+        }
+      }
+      
+      // Vérifier les restrictions de niveau
+      const currentLevel = character.niveauTotal;
+      if (feat.niveau_min && currentLevel < feat.niveau_min) {
+        reasons.push(`Niveau minimum ${feat.niveau_min} requis (actuel: ${currentLevel})`);
+      }
+      if (feat.niveau_max && currentLevel > feat.niveau_max) {
+        reasons.push(`Disponible uniquement jusqu'au niveau ${feat.niveau_max} (actuel: ${currentLevel})`);
+      }
+      
+      return {
+        canSelect: reasons.length === 0,
+        reasons
+      };
+    };
+  }, [character, getAllCharacterFeats, availableFeats, getClassLevels]);
+  
+  // Filtrer les dons par prérequis remplis
+  const getFeatsWithPrerequisites = useMemo(() => {
+    return (feats: Don[]) => {
+      return feats.map(feat => ({
+        feat,
+        prerequisiteCheck: canSelectFeat(feat)
+      }));
+    };
+  }, [canSelectFeat]);
+  
+  // Statistiques des dons
+  const featStats = useMemo(() => {
+    const totalSlots = featSlots.length;
+    const usedSlots = selectedFeats.length;
+    const generalSlots = featSlots.filter(slot => slot.type === 'general').length;
+    const bonusSlots = featSlots.filter(slot => slot.type === 'bonus').length;
+    const classSlots = featSlots.filter(slot => slot.type === 'class').length;
+    
+    return {
+      totalSlots,
+      usedSlots,
+      remainingSlots: totalSlots - usedSlots,
+      generalSlots,
+      bonusSlots,
+      classSlots,
+      completionPercentage: totalSlots > 0 ? (usedSlots / totalSlots) * 100 : 0
+    };
+  }, [featSlots, selectedFeats]);
+  
+  // Fonction pour vérifier si un don est disponible pour un slot spécifique
+  const getAvailableFeatsForSlot = useMemo(() => {
+    return (slot: FeatSlot) => {
+      let availableFeats = availableUnselectedFeats;
+      
+      console.log(`🔍 getAvailableFeatsForSlot - Slot: ${slot.description}, Type: ${slot.type}, Restrictions:`, slot.restrictions);
+      console.log(`🔍 Total dons avant filtrage: ${availableFeats.length}`);
+      
+      // Si le slot a des restrictions (comme les dons bonus de Fighter)
+      if (slot.restrictions && slot.restrictions.length > 0) {
+        const beforeFilter = availableFeats.length;
+        console.log(`🔍 Filtering with restrictions: [${slot.restrictions.join(', ')}]`);
+        
+        availableFeats = availableFeats.filter(feat => {
+          // Vérifier si le don a au moins un des tags requis
+          const hasRequiredTag = slot.restrictions!.some(requiredTag => 
+            feat.type.toLowerCase().includes(requiredTag.toLowerCase())
+          );
+          
+          console.log(`🎯 Feat "${feat.nom}" (type: "${feat.type}") - Required tags: [${slot.restrictions!.join(', ')}] - Match: ${hasRequiredTag}`);
+          
+          return hasRequiredTag;
+        });
+        console.log(`🐛 Filtering feats for ${slot.description}: ${beforeFilter} -> ${availableFeats.length} feats available`);
+        
+        if (availableFeats.length > 0) {
+          console.log(`✅ Remaining feats:`, availableFeats.map(f => `${f.nom} (${f.type})`));
+        } else {
+          console.log(`❌ NO FEATS REMAINING after filtering!`);
+        }
+      }
+      
+      return availableFeats;
+    };
+  }, [availableUnselectedFeats]);
+
+  return {
+    featSlots,
+    selectedFeats,
+    availableUnselectedFeats,
+    getAvailableFeatsForSlot,
+    canSelectFeat,
+    getFeatsWithPrerequisites,
+    featStats,
+    getAllCharacterFeats
+  };
+}
