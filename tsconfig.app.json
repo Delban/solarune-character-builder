@@ -15,6 +15,20 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Path mapping */
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+      "@shared/*": ["shared/*"],
+      "@features/*": ["features/*"],
+      "@app/*": ["app/*"],
+      "@data/*": ["data/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@models/*": ["models/*"]
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

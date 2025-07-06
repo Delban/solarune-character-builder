@@ -14,7 +14,10 @@ export interface Don {
     sagesse?: number;
     intelligence?: number;
     charisme?: number;
+    bonus_base_attaque?: number;
   };
+  niveau_min?: number;      // niveau minimum requis pour prendre le don (optionnel)
+  niveau_max?: number;      // niveau maximum pour prendre le don (optionnel)
   requisPour?: string[];      // identifiant(s) de dons pour lesquels celui-ci est un prérequis (optionnel, devrait être string[])
   fonctionnement: string;   // explication du fonctionnement du don
   utilisation: string;      // mode d'utilisation (ex: "Automatique", "Si sélectionné")

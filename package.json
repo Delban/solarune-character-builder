@@ -6,8 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build:analyze": "tsc && vite build --mode analyze",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "import:classes": "node scripts/import-classes.cjs",
+    "import:feats": "node scripts/import-feats.cjs",
+    "import:spells": "node scripts/import-spells.cjs",
+    "import:all": "node scripts/import-all.cjs",
+    "import:status": "node scripts/import-all.cjs --status"
   },
   "dependencies": {
     "react": "^18.2.0",

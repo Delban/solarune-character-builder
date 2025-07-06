@@ -30,6 +30,7 @@
     "type": "Général, Spécial",
     "conditionsId": [],
     "conditionsCaractéristiques": {},
+    "niveau_max": 1,
     "requisPour": [],
     "fonctionnement": "Le personnage a un bonus de +2 à ses jets de Représentation et de Détection.",
     "utilisation": "Automatique"
@@ -97,6 +98,7 @@
     "type": "Général",
     "conditionsId": [],
     "conditionsCaractéristiques": {},
+    "niveau_max": 1,
     "requisPour": [],
     "fonctionnement": "Le personnage a un bonus de +1 à ses jets de Volonté et de +2 pour résister à la compétence Raillerie.",
     "utilisation": "Automatique"
@@ -533,7 +535,8 @@
     "conditionsCaractéristiques": {},
     "requisPour": [],
     "fonctionnement": "Le personnage a un bonus de +2 à ses jets d’Évaluation et de Persuasion.",
-    "utilisation": "Automatique"
+    "utilisation": "Automatique",
+    "niveau_max": 1
   },
   {
     "id": "port_d_armure_intermediaire",
@@ -1175,8 +1178,8 @@
     "utilisation": "Automatique"
   },
   {
-    "id": "reflexes_epiсes",
-    "nom": "Réflexes épiсes",
+    "id": "reflexes_epiques",
+    "nom": "Réflexes épiques",
     "type": "Général",
     "conditionsCaractéristiques": {
       "niveau_personnage": 21
@@ -1222,7 +1225,8 @@
     "conditionsId": [],
     "requisPour": [],
     "fonctionnement": "Le personnage gagne 20 points de vie. Ce don peut être sélectionné plusieurs fois pour un bonus maximum de +200 points de vie.",
-    "utilisation": "Automatique"
+    "utilisation": "Automatique",
+    "special": "Remplacé par Grande Robustesse sur Solarune"
   },
   {
     "id": "sagesse_surhumaine",
@@ -1325,7 +1329,7 @@
   {
     "id": "seigneur_des_ombres_epique",
     "nom": "Seigneur des ombres épique",
-    "type": "Spécial",
+    "type": "Spécial, Don Modifié",
     "conditionsId": ["maitre_des_ombres_epique"],
     "conditionsCaractéristiques": {},
     "requisPour": [],
@@ -1347,9 +1351,10 @@
     "nom": "Sort épique : Armure de mage épique",
     "type": "Sort épique",
     "conditionsCaractéristiques": {
-      "niveau_personnage": 21
+      "niveau_personnage": 21,
+      "connaissance_des_sorts": 26
     },
-    "conditionsId": ["sort_niveau_9", "art_de_la_magie_26"],
+    "conditionsId": ["sort_niveau_9"],
     "requisPour": [],
     "fonctionnement": "Le lanceur de sorts bénéficie des bonus suivants à sa CA : armure naturelle +5, esquive +5, parade +5 et altération +5. Le bonus d’esquive est cumulable avec d’autres bonus d’esquive, mais les autres bonus ne sont pas cumulables avec des bonus du même type.",
     "utilisation": "Doit être lancé"
@@ -1357,11 +1362,12 @@
   {
     "id": "sort_epique_chevalier_dragon",
     "nom": "Sort épique : Chevalier dragon",
-    "type": "Sort épique",
+    "type": "Sort épique, Don Modifié",
     "conditionsCaractéristiques": {
-      "niveau_personnage": 21
+      "niveau_personnage": 21,
+      "connaissance_des_sorts": 22
     },
-    "conditionsId": ["sort_niveau_9", "connaissance_des_sorts_22"],
+    "conditionsId": ["sort_niveau_9"],
     "requisPour": [],
     "fonctionnement": "Le lanceur de sorts invoque un puissant dragon rouge adulte à l’endroit désigné, pour qu’il combatte à ses côtés.",
     "utilisation": "Doit être lancé"
@@ -1371,21 +1377,24 @@
     "nom": "Sort épique : Garde épique",
     "type": "Sort épique",
     "conditionsCaractéristiques": {
-      "niveau_personnage": 21
+      "niveau_personnage": 21,
+      "connaissance_des_sorts" : 34
     },
-    "conditionsId": ["sort_niveau_9", "art_de_la_magie_34"],
+    "conditionsId": ["sort_niveau_9"],
     "requisPour": [],
     "fonctionnement": "Ce sort invoque une puissante protection magique autour du lanceur, qui le protège contre tous les dégâts tranchants, contondants ou perforants. Il octroie une Réduction des dégâts de 50/+20 pendant 1 round par niveau.",
-    "utilisation": "Doit être lancé"
+    "utilisation": "Doit être lancé",
+    "special":"Ce sort n'est pas accessible sur Solarune en raison du prérequis inaccessible (connaissance des sorts 34)."
   },
   {
     "id": "sort_epique_orbe_infernal",
     "nom": "Sort épique : Orbe infernal",
-    "type": "Sort épique",
+    "type": "Sort épique, Don Modifié",
     "conditionsCaractéristiques": {
-      "niveau_personnage": 21
+      "niveau_personnage": 21,
+      "connaissance_des_sorts": 32
     },
-    "conditionsId": ["sort_niveau_9", "connaissance_des_sorts_32"],
+    "conditionsId": ["sort_niveau_9"],
     "requisPour": [],
     "fonctionnement": "Le lanceur de sorts crée une boule d’énergie infligeant 10d6 points de dégâts soniques, d’acide, de feu et d’électricité dans la zone d’effet.",
     "utilisation": "Doit être lancé"
@@ -1405,13 +1414,13 @@
   {
     "id": "sort_epique_ruine_supreme",
     "nom": "Sort épique : Ruine suprême",
-    "type": "Sort épique",
+    "type": "Sort épique, Don Modifié",
     "conditionsCaractéristiques": {
       "niveau_personnage": 21
     },
     "conditionsId": ["sort_niveau_9", "connaissance_des_sorts_25"],
     "requisPour": [],
-    "fonctionnement": "Le lanceur de sorts inflige 35d6 points de dégâts à une victime.",
+    "fonctionnement": "Le lanceur de sorts inflige 5d6 par niveau plus 1d6 tous les 25 HP de la cible (dégâts divisés sur les PJs).",
     "utilisation": "Doit être lancé",
     "special": "Jet de sauvegarde : Vigueur pour demi-dégâts."
   },
@@ -1483,13 +1492,14 @@
     },
     "conditionsId": [],
     "requisPour": [],
-    "fonctionnement": "Le personnage bénéficie d’un bonus de +4 à ses jets de Volonté.",
-    "utilisation": "Automatique"
+    "fonctionnement": "Le personnage bénéficie d'un bonus de +4 à ses jets de Volonté.",
+    "utilisation": "Automatique",
+    "niveau_min": 21
   },
   {
     "id": "empathie_sauvage",
     "nom": "Empathie Sauvage",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "empathie_animale": 7
     },
@@ -1504,7 +1514,7 @@
   {
     "id": "creation_d_objets_merveilleux",
     "nom": "Création d’Objets Merveilleux",
-    "type": "Création d'objet",
+    "type": "Création d'objet, Don Modifié",
     "conditionsCaractéristiques": {},
     "conditionsId": [
       "lanceur_de_sort_4"
@@ -1516,7 +1526,7 @@
   {
     "id": "prestige",
     "nom": "Prestige",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "intelligence": 13,
       "charisme": 13
@@ -1530,7 +1540,7 @@
   {
     "id": "negociation_de_contrats",
     "nom": "Négociation de Contrats",
-    "type": "Magique",
+    "type": "Magique, Don Ajouté",
     "conditionsCaractéristiques": {
       "persuasion": 5,
       "charisme": 13
@@ -1546,7 +1556,7 @@
   {
     "id": "maitrise_des_armures_legeres",
     "nom": "Maîtrise des Armures Légères",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "bonus_base_attaque": 3,
       "dexterite": 12,
@@ -1563,7 +1573,7 @@
   {
     "id": "science_de_la_maitrise_des_armures_legeres",
     "nom": "Science de la Maîtrise des Armures Légères",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "bonus_base_attaque": 8,
       "discipline": 12
@@ -1578,7 +1588,7 @@
   {
     "id": "maitrise_epique_des_armures_legeres",
     "nom": "Maîtrise Épique des Armures Légères",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "niveau_personnage": 21,
       "discipline": 24
@@ -1593,7 +1603,7 @@
   {
     "id": "maitrise_des_armures_intermediaires",
     "nom": "Maîtrise des Armures Intermédiaires",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "bonus_base_attaque": 3,
       "force": 10,
@@ -1611,7 +1621,7 @@
   {
     "id": "science_de_la_maitrise_des_armures_intermediaires",
     "nom": "Science de la Maîtrise des Armures Intermédiaires",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "bonus_base_attaque": 8,
       "discipline": 12
@@ -1626,7 +1636,7 @@
   {
     "id": "maitrise_epique_des_armures_intermediaires",
     "nom": "Maîtrise Épique des Armures Intermédiaires",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "niveau_personnage": 21,
       "discipline": 24
@@ -1641,7 +1651,7 @@
   {
     "id": "maitrise_des_armures_lourdes",
     "nom": "Maîtrise des Armures Lourdes",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "bonus_base_attaque": 3,
       "force": 12,
@@ -1658,7 +1668,7 @@
   {
     "id": "science_de_la_maitrise_des_armures_lourdes",
     "nom": "Science de la Maîtrise des Armures Lourdes",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "bonus_base_attaque": 8,
       "discipline": 12
@@ -1673,7 +1683,7 @@
   {
     "id": "maitrise_epique_des_armures_lourdes",
     "nom": "Maîtrise Épique des Armures Lourdes",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "niveau_personnage": 21,
       "discipline": 24
@@ -1688,7 +1698,7 @@
   {
     "id": "rempart",
     "nom": "Rempart",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "bonus_base_attaque": 4,
       "force": 13,
@@ -1704,7 +1714,7 @@
   {
     "id": "science_du_rempart",
     "nom": "Science du Rempart",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "bonus_base_attaque": 9,
       "discipline": 12
@@ -1719,7 +1729,7 @@
   {
     "id": "cri_de_provocation",
     "nom": "Cri de Provocation",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "raillerie": 5
     },
@@ -1736,7 +1746,7 @@
   {
     "id": "grande_robustesse",
     "nom": "Grande Robustesse",
-    "type": "Général",
+    "type": "Général, Don Modifié",
     "conditionsCaractéristiques": {
       "vigueur": 5
     },
@@ -1748,7 +1758,7 @@
   {
     "id": "camouflage_personnel",
     "nom": "Camouflage Personnel",
-    "type": "Spécial",
+    "type": "Spécial, Don Modifié",
     "conditionsCaractéristiques": {
       "dexterite": 20,
       "discretion": 20,
@@ -1764,7 +1774,7 @@
   {
     "id": "esquive_epique",
     "nom": "Esquive Épique",
-    "type": "Spécial",
+    "type": "Spécial, Don Modifié",
     "conditionsCaractéristiques": {
       "niveau_personnage": 21,
       "dexterite": 23,
@@ -1782,7 +1792,7 @@
   {
     "id": "pied_marin",
     "nom": "Pied-Marin",
-    "type": "Général",
+    "type": "Général, Don Ajouté",
     "conditionsCaractéristiques": {
       "force": 10,
       "dexterite": 10,
@@ -1798,7 +1808,7 @@
   {
     "id": "reputation_epique",
     "nom": "Réputation Épique",
-    "type": "Général",
+    "type": "Général, Don Modifié",
     "conditionsCaractéristiques": {
       "niveau_personnage": 21
     },
